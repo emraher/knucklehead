@@ -6,6 +6,9 @@ manifest:
       url-base: https://github.com/urob
     - name: caksoylar
       url-base: https://github.com/caksoylar
+    # support nice_oled and nice_epaper
+    - name: mctechnology17
+      url-base: https://github.com/mctechnology17
 
   projects:
     - name: zmk
@@ -19,6 +22,11 @@ manifest:
 
     - name: zmk-tri-state
       remote: urob
+      revision: main
+    
+    # support nice_oled and nice_epaper
+    - name: zmk-nice-oled
+      remote: mctechnology17
       revision: main
 
   self:
