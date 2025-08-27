@@ -78,6 +78,11 @@ parse_config:
       tap: $$mdi:backup-restore$$
       hold: $$mdi:progress-download$$
 
+    # MacOS Shortcuts
+    "&ss_full": $$mdi:monitor-screenshot$$     # ⌘⇧3 – full screen
+    "&ss_sel": $$mdi:selection-drag$$         # ⌘⇧4 – region
+    "&ss_bar": $$mdi:monitor-dashboard$$      # ⌘⇧5 – toolbar/recorder 
+
   # ZMK
   zmk_keycode_map:
     # Symbols

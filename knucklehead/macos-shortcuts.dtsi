@@ -1,0 +1,25 @@
+// knucklehead/macos-shortcuts.dtsi
+/ {
+    macros {
+        ss_full: ss_full {
+            compatible = "zmk,behavior-macro";
+            label = "ss_full";          // Screenshot full screen (⌘⇧3)
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(N3))>;
+        };
+
+        ss_sel: ss_sel {
+            compatible = "zmk,behavior-macro";
+            label = "ss_sel";          // Screenshot selection (⌘⇧4)
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(N4))>;
+        };
+
+        ss_bar: ss_bar {
+            compatible = "zmk,behavior-macro";
+            label = "ss_bar";          // Screenshot toolbar (⌘⇧5)
+            #binding-cells = <0>;
+            bindings = <&kp LG(LS(N5))>;
+        };
+    };
+};
