@@ -93,9 +93,9 @@ layers:
   - F3
   - F4
   - F5
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:monitor-screenshot$$
+  - $$mdi:selection-drag$$
+  - $$mdi:monitor-dashboard$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:power-standby$$
