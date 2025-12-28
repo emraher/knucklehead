@@ -41,7 +41,7 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
-  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$', s: '$$mdi:alpha-w-box$$'}
+  - {t: '&enter_dance', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '`', s: '~'}
   L2:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -229,13 +229,13 @@ combos:
   k: $$mdi:play-pause$$
   l: [L1, L2, Fn]
 - p: [31, 33]
-  k: '&r_assign'
+  k: <-
   l: [L1, L2]
 - p: [30, 31]
-  k: '&r_pipe'
+  k: '|>'
   l: [L1, L2]
 - p: [14, 27]
-  k: '&r_chunk'
+  k: '`{r}`'
   l: [L1]
 - p: [37, 40]
   k: {t: Fn, h: '$$mdi:close-box$$'}
