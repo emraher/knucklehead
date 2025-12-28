@@ -358,8 +358,8 @@ Every time you push changes to this repository, GitHub Actions automatically bui
 **Files you'll find:**
 ```
 firmware/
-├── corne_left-nice_nano_v2-zmk.uf2       # Left half firmware
-└── corne_right-nice_nano_v2-zmk.uf2      # Right half firmware
+├── corne_left-nice_nano-zmk.uf2       # Left half firmware
+└── corne_right-nice_nano-zmk.uf2      # Right half firmware
 ```
 
 ### Flashing Instructions

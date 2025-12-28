@@ -261,9 +261,9 @@ Keys maintain consistent positions across layers. When replaced on upper layers,
 Edit `build.yaml`:
 ```yaml
 include:
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: corne_left nice_view_adapter nice_view
-  - board: nice_nano_v2
+  - board: nice_nano
     shield: corne_right nice_view_adapter nice_view
 ```
 
