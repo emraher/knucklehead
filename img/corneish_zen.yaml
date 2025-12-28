@@ -11,7 +11,7 @@ layers:
   - L
   - U
   - Y
-  - {t: '''', s: '"'}
+  - '?'
   - $$mdi:close-box$$
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$', type: backspace}
   - A
@@ -24,7 +24,7 @@ layers:
   - {t: E, h: '$$mdi:apple-keyboard-option$$'}
   - {t: I, h: '$$mdi:apple-keyboard-control$$'}
   - O
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: '''', s: '"'}
   - {t: Fn, h: '$$mdi:close-box$$'}
   - Z
   - X
@@ -41,21 +41,21 @@ layers:
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
-  - {t: '$$mdi:apple-keyboard-shift$$', h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$', s: '$$mdi:alpha-w-box$$'}
   - {t: '`', s: '~'}
   L2:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '1', s: '!'}
   - {t: '2', s: '@'}
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - $$mdi:skip-previous$$
+  - $$mdi:play-pause$$
   - $$mdi:volume-low$$
   - $$mdi:volume-high$$
+  - $$mdi:skip-previous$$
   - $$mdi:skip-next$$
   - $$mdi:volume-off$$
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '6', s: ^}
   - {t: '7', h: '$$mdi:apple-keyboard-control$$', s: '&'}
@@ -66,20 +66,20 @@ layers:
   - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:apple-keyboard-command$$'}
   - {t: '$$mdi:arrow-up-bold$$', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '$$mdi:arrow-right-bold$$', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+$$mdi:arrow-down-bold$$
+  - Gui+$$mdi:arrow-up-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Gui+$$mdi:arrow-left-bold$$
+  - HOME
+  - END
+  - Gui+$$mdi:arrow-right-bold$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:close-box$$', h: L2}
@@ -96,20 +96,20 @@ layers:
   - $$mdi:monitor-screenshot$$
   - $$mdi:selection-drag$$
   - $$mdi:monitor-dashboard$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:power-standby$$
+  - $$mdi:window-maximize$$
+  - $$mdi:clipboard-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$', type: bootloader}
   - F6
   - {t: F7, h: '$$mdi:apple-keyboard-control$$'}
   - {t: F8, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F9, h: '$$mdi:apple-keyboard-command$$'}
   - {t: F10, h: '$$mdi:triangle$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:clipboard-text-outline$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$', type: bootloader}
   - {t: '$$mdi:close-box$$', h: Fn}
   - F11
@@ -117,18 +117,18 @@ layers:
   - F13
   - F14
   - F15
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:close-box$$', h: Fn}
-  - $$mdi:brightness-7$$
-  - $$mdi:brightness-5$$
+  - SLCK
+  - PAUSE BREAK
   - {t: '$$mdi:close-box$$', h: L2}
   - {t: '$$mdi:close-box$$', h: L2}
   - $$mdi:apple-keyboard-caps$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
 combos:
 - p: [1, 13]
   k: '!'
@@ -184,6 +184,27 @@ combos:
 - p: [21, 33]
   k: {h: \, s: '|'}
   l: [L1, L2, Fn]
+- p: [31, 32]
+  k: '|'
+  l: [L1, L2]
+- p: [32, 33]
+  k: _
+  l: [L1, L2]
+- p: [10, 22]
+  k: {t: '`', s: '~'}
+  l: [L1, L2]
+- p: [22, 34]
+  k: '~'
+  l: [L1, L2]
+- p: [27, 28]
+  k: '{'
+  l: [L1, L2]
+- p: [28, 29]
+  k: '}'
+  l: [L1, L2]
+- p: [33, 34]
+  k: ':'
+  l: [L1, L2]
 - p: [1, 2, 3, 4]
   k: $$mdi:bluetooth-off$$
   l: [Fn]
@@ -207,3 +228,15 @@ combos:
 - p: [6, 7]
   k: $$mdi:play-pause$$
   l: [L1, L2, Fn]
+- p: [31, 33]
+  k: '&r_assign'
+  l: [L1, L2]
+- p: [30, 31]
+  k: '&r_pipe'
+  l: [L1, L2]
+- p: [14, 27]
+  k: '&r_chunk'
+  l: [L1]
+- p: [37, 40]
+  k: {t: Fn, h: '$$mdi:close-box$$'}
+  l: [L1]
