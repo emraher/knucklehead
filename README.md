@@ -105,7 +105,7 @@ This layout is specifically optimized for data science and technical writing wor
 **Dedicated Operators:**
 - `<-` (assignment operator) - Combo: H+. (positions 31+33)
 - `|>` (native pipe operator) - Combo: K+H (positions 30+31)
-- ` ```{r} ` (RMarkdown/Quarto code chunk) - Combo: R+C (positions 14+27)
+- ` ```{r}``` ` (RMarkdown/Quarto code chunk) - Combo: R+C (positions 14+27)
 
 **Symbol Access:**
 - `:` (colon) for package notation (`package::function`)

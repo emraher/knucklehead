@@ -85,6 +85,11 @@ parse_config:
       tap: $$mdi:backup-restore$$
       hold: $$mdi:progress-download$$
 
+    # R Language Operators
+    "&r_assign": "<-"
+    "&r_pipe": "|>"
+    "&r_chunk": "`{r}`"
+
     # MacOS Shortcuts
     "&ss_full": $$mdi:monitor-screenshot$$     # ⌘⇧3 – full screen
     "&ss_sel": $$mdi:selection-drag$$         # ⌘⇧4 – region

@@ -67,7 +67,7 @@
     COMBO(r_assign, &r_assign, 31 33, L1 L2, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
     // R pipe operator: |>
     COMBO(r_pipe_op, &r_pipe, 30 31, L1 L2, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
-    // RMarkdown/Quarto code chunk: ```{r}
+    // RMarkdown/Quarto code chunk: `{r}`
     COMBO(r_chunk, &r_chunk, 14 27, L1, COMBO_TERM_DEFAULT, COMBO_QUICK_TAP_MS)
 
     /* Layer Access */

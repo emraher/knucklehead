@@ -147,7 +147,7 @@ COMBO(name, &binding, key_positions, layers, timeout, quick_tap)
 **Categories**:
 1. Symbol combos - Vertical key pairs for special characters
 2. Bluetooth combos - Device switching on Fn layer
-3. R language operators - `<-`, `|>`, ` ```{r} `
+3. R language operators - `<-`, `|>`, ` ```{r}``` `
 4. Layer access - Quick Fn layer access via thumb combo
 
 **Add visual representation** in `keymap-drawer/combos.yaml` for any new combos

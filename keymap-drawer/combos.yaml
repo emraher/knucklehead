@@ -35,7 +35,7 @@ combos:
     k: { t: "|>" }
     l: [L1, L2]
   - p: [14, 27]
-    k: { t: "```{r}" }
+    k: { t: "`{r}`" }
     l: [L1]
   # Layer access combos
   - p: [37, 40]

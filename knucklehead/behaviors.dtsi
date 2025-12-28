@@ -160,7 +160,7 @@
       tapping-term-ms = <TAPPING_TERM_MS>;
       quick-tap-ms = <QUICK_TAP_MS>;
       bindings = <&kp>, <&enter_dance>;
-      #binding-cells = <1>;
+      #binding-cells = <2>;
     };
   };
 };

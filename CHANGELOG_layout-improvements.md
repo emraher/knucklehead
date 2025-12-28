@@ -19,12 +19,12 @@ This branch includes comprehensive improvements to optimize the Knucklehead layo
 **New Macros** (`knucklehead/macros.dtsi`):
 - `r_assign` - `<-` assignment operator
 - `r_pipe` - `|>` native pipe operator
-- `r_chunk` - ` ```{r} ` code chunk insertion for RMarkdown/Quarto
+- `r_chunk` - ` ```{r}``` ` code chunk insertion for RMarkdown/Quarto
 
 **New Combos** (`knucklehead/combos.dtsi`):
 - `<-` → H+. (positions 31+33)
 - `|>` → K+H (positions 30+31)
-- ` ```{r} ` → R+C (positions 14+27)
+- ` ```{r}``` ` → R+C (positions 14+27)
 
 ### LaTeX & General Symbol Support
 **New Symbol Combos** (`knucklehead/combos.dtsi`):
