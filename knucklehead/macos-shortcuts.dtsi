@@ -21,5 +21,28 @@
             #binding-cells = <0>;
             bindings = <&kp LG(LS(N5))>;
         };
+
+        ss_win: ss_win {
+            compatible = "zmk,behavior-macro";
+            label = "ss_win";          // Screenshot window (⌘⇧4 then Space)
+            #binding-cells = <0>;
+            wait-ms = <100>;
+            tap-ms = <10>;
+            bindings = <&kp LG(LS(N4))>, <&macro_wait_time 200>, <&kp SPACE>;
+        };
+
+        ss_full_clip: ss_full_clip {
+            compatible = "zmk,behavior-macro";
+            label = "ss_full_clip";    // Screenshot full to clipboard (⌃⌘⇧3)
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(LS(N3)))>;
+        };
+
+        ss_sel_clip: ss_sel_clip {
+            compatible = "zmk,behavior-macro";
+            label = "ss_sel_clip";     // Screenshot selection to clipboard (⌃⌘⇧4)
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(LS(N4)))>;
+        };
     };
 };

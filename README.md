@@ -96,6 +96,61 @@ Together with the [single base layer](#single-base-layer) and [upper layer swapp
 
 ---
 
+### R / LaTeX / Markdown / Bash Workflow Optimizations
+
+This layout is specifically optimized for data science and technical writing workflows using R, LaTeX, Markdown, and Bash.
+
+#### R Language Support
+
+**Dedicated Operators:**
+- `<-` (assignment operator) - Combo: H+. (positions 31+33)
+- `|>` (native pipe operator) - Combo: K+H (positions 30+31)
+- ` ```{r} ` (RMarkdown/Quarto code chunk) - Combo: R+C (positions 14+27)
+
+**Symbol Access:**
+- `:` (colon) for package notation (`package::function`)
+- `_` (underscore) heavily used for snake_case variable names
+- All symbols accessible via combos for minimal hand movement
+
+#### LaTeX Support
+
+**Essential Symbols:**
+- `{` `}` curly braces - Combos: C+D, D+V
+- `\` backslash - Combo available
+- `$` for math mode
+- `^` for superscripts
+
+**Caps Word Customization:**
+The `caps_word` behavior is customized to continue on `_`, numbers, `-`, `{`, `}`, and `^`, making it perfect for typing LaTeX labels and references:
+```latex
+\label{FIG_MAIN_RESULT}   % Works seamlessly!
+\ref{TABLE_2024}          % Numbers stay in caps_word
+X^{MAX_VALUE}             % Braces and caret work
+```
+
+#### Markdown & Bash
+
+**Code Fences:**
+- `` ` `` backtick easily accessible for inline code and code blocks
+- R chunk insertion macro for quick code block creation
+
+**Shell Operations:**
+- `|` pipe operator - Essential for bash pipelines
+- `~` tilde - Home directory shorthand
+- `$` for variables
+
+#### Navigation Enhancements (L2 Layer)
+
+**Word & Document Navigation:**
+- **Cmd+Left/Right** - Jump word backward/forward (positions 30, 33)
+- **Cmd+Up/Down** - Jump to document start/end (positions 26, 27)
+- **HOME/END** - Line start/end (positions 31, 32)
+
+**VIM-style Arrows:**
+- Standard HJKL positions with home row mods for modifier combinations
+
+---
+
 ### Timer-less Home Row Mods
 
 By using [@urob's Timer-less](https://github.com/urob/zmk-config?tab=readme-ov-file#timeless-homerow-mods) [Home Row Mods](https://precondition.github.io/home-row-mods), modifier keys (`⌃`, `⌥`, `⌘`, `▲`) can be activated by holding keys in the "home row", consistently across layers, without interfering with normal typing (i.e. without the need to tap a key within a certain time window).
@@ -112,22 +167,28 @@ A smart word behavior is one where, to perform an action for which you would nor
 
 The most common example of this type of behavior is [ZMK's `&caps_word`](https://zmk.dev/docs/behaviors/caps-word) (or [QMK's](https://docs.qmk.fm/#/feature_caps_word)).
 
-This layout uses 2 smart word behaviors (marked with the 🆆 symbol):
+This layout uses smart word behaviors (marked with the 🆆 symbol):
 
 > [!NOTE]
 >
-> Both of these were taken from [@urob's fantastic layout](https://github.com/urob/zmk-config).
+> These behaviors are adapted from [@urob's fantastic layout](https://github.com/urob/zmk-config).
 
-#### Smart Shift
+#### Smart Enter (Right Middle Thumb)
 
-The right hand middle thumb **⇧** (shift) key will act as follows:
+The right hand middle thumb **⏎** (Enter) key replaces the traditional shift-only thumb key with a more versatile behavior:
 
 | Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Effect                                                                                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `hold`                                                                               | Normal "shift" behavior.                                                                                                                                                                                                                                           |
-| `tap`                                                                                | [Sticky "shift" behavior](https://zmk.dev/docs/behaviors/sticky-key) (i.e. will apply a "shift" modification to the next key pressed within 1s). Useful when capitalizing words at the beginning of sentences without holding the key (for example).               |
-| `double-tap`                                                                         | `&caps_word`, i.e. retains "shift" behavior until a character not in the "[continue-list](https://zmk.dev/docs/behaviors/caps-word#continue-list)" is pressed. Useful for ALL_CAPS word sequences, like conventional constant names on some programming languages. |
-| `Fn` + `tap`                                                                         | **⇪** (CAPS LOCK).                                                                                                                                                                                                                                                 |
+| `tap`                                                                                | **⏎** Enter/Return - More ergonomic than pinky reach                                                                                                                                                                                                              |
+| `hold`                                                                               | **⇧** Shift - Normal shift behavior when held                                                                                                                                                                                                                     |
+| `double-tap`                                                                         | `&caps_word` - Retains shift until non-letter pressed. **Customized for R/LaTeX**: continues on `_` `0-9` `-` `{` `}` `^` for typing `VAR_NAME_123`, `\label{FIG_MAIN}`, `X^{MAX}` |
+
+**Benefits:**
+- Enter on thumb reduces pinky strain during long coding sessions
+- Shift still easily accessible via hold
+- Caps word perfect for R constants (`MAX_ITERATIONS_100`) and LaTeX labels (`FIG_RESULTS_2024`)
+
+**Note:** Quote (`'`) moved from top pinky row to home pinky row (position 23) for easier R string access
 
 #### Smart L2 Layer
 
@@ -182,6 +243,74 @@ This ensures any transparent keys in that upper layer will fall through to `L1`,
 These special cases are marked with the same 🆇 symbol.
 
 Without this behavior it might've been confusing if you pressed the `Fn` key while on `L2`'s smart layer mode, and pressed a transparent key expecting an `L1` keycode when instead you get an `L2` one.
+
+---
+
+### OLED Display Features
+
+This keyboard features nice!OLED displays with custom widgets powered by [mctechnology17's zmk-nice-oled module](https://github.com/mctechnology17/zmk-nice-oled).
+
+#### Productivity Focus Setup
+
+**Left Display (Central):**
+- **Layer Indicator** - Shows current layer (L1, L2, Fn)
+- **WPM Graph** - Visual graph of typing speed over time to track flow state
+- **Battery Levels** - Both keyboard halves' battery percentage
+
+**Right Display (Peripheral):**
+- **Bongo Cat** - Animated cat that bops along as you type (faster typing = faster animation!)
+- **Bluetooth Status** - Active profile and connection state
+- **HID Indicators** - Visual feedback for Caps Lock, Num Lock, Scroll Lock
+
+#### Customization
+
+Edit `config/corne.conf` to enable/disable widgets:
+```conf
+# WPM displays
+CONFIG_NICE_OLED_WIDGET_WPM_NUMBER=y
+CONFIG_NICE_OLED_WIDGET_WPM_GRAPH=y
+CONFIG_NICE_OLED_WIDGET_WPM_BONGO_CAT=y
+
+# Animations
+CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_CAT=y
+CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_POKEMON=y
+```
+
+See [CLAUDE.md](./CLAUDE.md#oled-display-customization) for all available widgets.
+
+---
+
+### macOS-Specific Optimizations
+
+#### Screenshot Shortcuts (Fn Layer)
+
+**Comprehensive screenshot toolkit:**
+- **⌘⇧3** - Full screen (position 6)
+- **⌘⇧4** - Select region (position 7)
+- **⌘⇧5** - Screenshot toolbar (position 8)
+- **⌘⇧4 Space** - Window capture (position 9)
+- **⌃⌘⇧3** - Full screen to clipboard (position 10)
+- **⌃⌘⇧4** - Region to clipboard (position 20)
+
+#### Brightness Controls (Fn Layer Thumbs)
+
+> [!IMPORTANT]
+>
+> macOS doesn't properly support standard HID brightness codes from external keyboards. Instead, this layout uses:
+> - **Left thumb (Fn+36)**: SLCK (Scroll Lock) → Brightness Down
+> - **Right thumb (Fn+37)**: PAUSE_BREAK → Brightness Up
+>
+> These keys are treated as F14/F15 on macOS, which control brightness. [Reference: ZMK Issue #1045](https://github.com/zmkfirmware/zmk/issues/1045)
+
+**No system settings changes needed** - brightness controls work out of the box!
+
+#### Media Controls (L2 Layer)
+
+Optimized layout for quick access:
+- **Play/Pause** - Position 6 (most-used control)
+- **Volume Down/Up** - Positions 7/8 (middle for easy thumb reach)
+- **Previous/Next Track** - Positions 9/10
+- **Mute** - Position 11 (end position to avoid accidental presses)
 
 ---
 

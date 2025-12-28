@@ -29,6 +29,13 @@ parse_config:
     "&kt RSHIFT":
       tap: $$mdi:apple-keyboard-shift$$
       hold: $$mdi:toggle-switch$$
+    "&smart_shift":
+      tap: $$mdi:apple-keyboard-shift$$
+      shifted: $$mdi:alpha-w-box$$
+    "&smart_enter RSHFT":
+      tap: $$mdi:keyboard-return$$
+      hold: $$mdi:apple-keyboard-shift$$
+      shifted: $$mdi:alpha-w-box$$
 
     # Empty
     "&none":
@@ -81,7 +88,14 @@ parse_config:
     # MacOS Shortcuts
     "&ss_full": $$mdi:monitor-screenshot$$     # ⌘⇧3 – full screen
     "&ss_sel": $$mdi:selection-drag$$         # ⌘⇧4 – region
-    "&ss_bar": $$mdi:monitor-dashboard$$      # ⌘⇧5 – toolbar/recorder 
+    "&ss_bar": $$mdi:monitor-dashboard$$      # ⌘⇧5 – toolbar/recorder
+    "&ss_win": $$mdi:window-maximize$$        # ⌘⇧4 Space – window
+    "&ss_full_clip": $$mdi:clipboard-outline$$ # ⌃⌘⇧3 – full to clipboard
+    "&ss_sel_clip": $$mdi:clipboard-text-outline$$ # ⌃⌘⇧4 – selection to clipboard
+
+    # System keys (macOS-specific)
+    "SLCK": $$mdi:brightness-6$$              # Brightness down (F14 equivalent)
+    "PAUSE_BREAK": $$mdi:brightness-7$$       # Brightness up (F15 equivalent) 
 
   # ZMK
   zmk_keycode_map:

@@ -17,6 +17,13 @@
   quick-release;
 };
 
+// Customize caps_word for R/LaTeX workflow
+// Allows: underscore (snake_case), numbers (var_123), minus (some R function names)
+// LaTeX: curly braces for labels (\label{FIG_MAIN}), caret for superscripts
+&caps_word {
+  continue-list = <UNDERSCORE UNDER MINUS N0 N1 N2 N3 N4 N5 N6 N7 N8 N9 LBRC RBRC CARET BSPC DEL>;
+};
+
 // From: https://github.com/urob/zmk-config/
 // num-word, requires PR https://github.com/zmkfirmware/zmk/pull/1451
 // Adds arrows and shift to smart layer for more comfortable navigation/selection moves
@@ -125,6 +132,35 @@
         tapping-term-ms = <500>;
         flavor = "tap-preferred";
         bindings = <&bootloader>, <&sys_reset>;
+    };
+
+    /*
+    - tap: &kp ENTER
+    - tap x 2: &caps_word
+
+    Used in smart_enter below
+    */
+    /omit-if-no-ref/ enter_dance: enter_dance {
+      compatible = "zmk,behavior-tap-dance";
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      bindings = <&kp ENTER>, <&caps_word>;
+      #binding-cells = <0>;
+    };
+
+    /*
+    - tap: enter
+    - double-tap: caps_word
+    - hold: shift
+
+    Combines Enter functionality with smart shift behavior
+    */
+    /omit-if-no-ref/ smart_enter: smart_enter {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "balanced";
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      quick-tap-ms = <QUICK_TAP_MS>;
+      bindings = <&kp>, <&enter_dance>;
+      #binding-cells = <1>;
     };
   };
 };
