@@ -16,6 +16,90 @@ Knucklehead[^1] is a mnemonic, macOS-optimized ergonomic columnar layout for [co
 >
 > [Home Row Mods](#timer-less-home-row-mods) are now the default. Previous version available on the [legacy branch](https://github.com/minusfive/zmk-config/tree/legacy).
 
+## Layout Improvements
+
+This layout has been specifically optimized for **data science and technical writing workflows** using R, LaTeX, Markdown, and Bash on macOS. The improvements focus on ergonomics, workflow efficiency, and reducing hand movement during long coding sessions.
+
+### R Language Workflow
+
+**Dedicated Keys on Fn Layer** (home row positions 19-21):
+- **`<-`** Assignment operator (Fn+19)
+- **`|>`** Native pipe operator (Fn+20)
+- **` ```{r}``` `** RMarkdown/Quarto code chunk insertion (Fn+21)
+
+These operators are placed on the Fn layer home row for maximum ergonomics - no awkward combos needed. Access them by holding the Fn key (outer pinky columns) and pressing the corresponding home row position.
+
+**Why this matters:** R code heavily uses `<-` for assignment and `|>` for piping. Having these on dedicated, easily accessible keys dramatically improves typing flow compared to typing them out manually or using awkward combos.
+
+### Smart Enter Behavior
+
+The right middle thumb key combines three functions:
+- **Tap:** Enter/Return (more ergonomic than pinky reach)
+- **Hold:** Shift (normal shift behavior)
+- **Double-tap:** Caps Word with R/LaTeX support
+
+**Caps Word Customization:** Continues on `_`, `0-9`, `-`, `{`, `}`, `^` allowing seamless typing of:
+- R constants: `MAX_ITERATIONS_100`
+- LaTeX labels: `\label{FIG_MAIN_RESULT}`
+- LaTeX superscripts: `X^{MAX_VALUE}`
+
+**Ergonomic benefit:** Enter on thumb reduces pinky strain during long sessions, while preserving shift accessibility via hold.
+
+### Navigation Enhancements
+
+**L2 Layer bottom row** provides quick document navigation:
+- **Cmd+Up/Down:** Jump to document start/end
+- **Cmd+Left/Right:** Jump word backward/forward
+- **HOME/END:** Line start/end
+
+**VIM-style arrows:** HJKL positions on L2 with home row mods for modifier combinations.
+
+These navigation shortcuts are essential for quickly moving through R scripts, LaTeX documents, and long markdown files.
+
+### macOS Integration
+
+**Screenshot Shortcuts** (Fn layer top row, positions 6-11):
+- Full screen (⌘⇧3)
+- Select region (⌘⇧4)
+- Screenshot toolbar (⌘⇧5)
+- Window capture (⌘⇧4+Space)
+- Full screen to clipboard (⌃⌘⇧3)
+- Selection to clipboard (⌃⌘⇧4)
+
+**Brightness Controls** (Fn layer thumbs):
+- Uses SLCK (F14) and PAUSE_BREAK (F15) mapping for macOS compatibility
+- Works out of the box without system settings changes
+
+**Media Controls** (L2 layer top row):
+- Play/Pause at most accessible position
+- Volume controls optimized for thumb reach
+- Track navigation easily accessible
+
+### OLED Display Features
+
+**Left Display (Central):**
+- Layer indicator - shows current layer (L1, L2, Fn)
+- WPM graph - tracks typing speed to monitor flow state
+- Battery levels - both keyboard halves
+
+**Right Display (Peripheral):**
+- Bongo Cat - animated typing feedback (faster typing = faster animation)
+- Bluetooth status - active profile and connection state
+- HID indicators - Caps Lock, Num Lock, Scroll Lock
+
+Powered by [mctechnology17's zmk-nice-oled module](https://github.com/mctechnology17/zmk-nice-oled).
+
+### Symbol Access
+
+Essential symbols remain easily accessible through the original combo system:
+- Vertical combos for `! @ # $ %` and `^ & * ( )`
+- Bracket combos for `[ ] { }` and `\`
+- Math operation combos for `+ - = /`
+
+The layout avoids over-complicating with too many combos - only the most frequently used symbols are mapped, keeping the mental model simple.
+
+---
+
 ## Legend
 
 | Symbol | Key Name                                            | Symbol | Key Name                                                  |
@@ -93,61 +177,6 @@ When a key is replaced on upper layers, an associative mnemonic is used to make 
 On upper layers unused keys are "[transparent](https://zmk.dev/docs/behaviors/misc#transparent)", so events flow down to (and are activated on) the base layer, and thus the base layer's key placement is preserved.
 
 Together with the [single base layer](#single-base-layer) and [upper layer swapping](#upper-layer-swapping-vs-stacking), these principles of static, associative key placement aim to make the [modal nature of layers](<https://en.wikipedia.org/wiki/Modality_(human–computer_interaction)>) more intuitive and predictable, enabling faster development of muscle memory.
-
----
-
-### R / LaTeX / Markdown / Bash Workflow Optimizations
-
-This layout is specifically optimized for data science and technical writing workflows using R, LaTeX, Markdown, and Bash.
-
-#### R Language Support
-
-**Dedicated Operators:**
-- `<-` (assignment operator) - Combo: H+. (positions 31+33)
-- `|>` (native pipe operator) - Combo: K+H (positions 30+31)
-- ` ```{r}``` ` (RMarkdown/Quarto code chunk) - Combo: R+C (positions 14+27)
-
-**Symbol Access:**
-- `:` (colon) for package notation (`package::function`)
-- `_` (underscore) heavily used for snake_case variable names
-- All symbols accessible via combos for minimal hand movement
-
-#### LaTeX Support
-
-**Essential Symbols:**
-- `{` `}` curly braces - Combos: C+D, D+V
-- `\` backslash - Combo available
-- `$` for math mode
-- `^` for superscripts
-
-**Caps Word Customization:**
-The `caps_word` behavior is customized to continue on `_`, numbers, `-`, `{`, `}`, and `^`, making it perfect for typing LaTeX labels and references:
-```latex
-\label{FIG_MAIN_RESULT}   % Works seamlessly!
-\ref{TABLE_2024}          % Numbers stay in caps_word
-X^{MAX_VALUE}             % Braces and caret work
-```
-
-#### Markdown & Bash
-
-**Code Fences:**
-- `` ` `` backtick easily accessible for inline code and code blocks
-- R chunk insertion macro for quick code block creation
-
-**Shell Operations:**
-- `|` pipe operator - Essential for bash pipelines
-- `~` tilde - Home directory shorthand
-- `$` for variables
-
-#### Navigation Enhancements (L2 Layer)
-
-**Word & Document Navigation:**
-- **Cmd+Left/Right** - Jump word backward/forward (positions 30, 33)
-- **Cmd+Up/Down** - Jump to document start/end (positions 26, 27)
-- **HOME/END** - Line start/end (positions 31, 32)
-
-**VIM-style Arrows:**
-- Standard HJKL positions with home row mods for modifier combinations
 
 ---
 
@@ -243,74 +272,6 @@ This ensures any transparent keys in that upper layer will fall through to `L1`,
 These special cases are marked with the same 🆇 symbol.
 
 Without this behavior it might've been confusing if you pressed the `Fn` key while on `L2`'s smart layer mode, and pressed a transparent key expecting an `L1` keycode when instead you get an `L2` one.
-
----
-
-### OLED Display Features
-
-This keyboard features nice!OLED displays with custom widgets powered by [mctechnology17's zmk-nice-oled module](https://github.com/mctechnology17/zmk-nice-oled).
-
-#### Productivity Focus Setup
-
-**Left Display (Central):**
-- **Layer Indicator** - Shows current layer (L1, L2, Fn)
-- **WPM Graph** - Visual graph of typing speed over time to track flow state
-- **Battery Levels** - Both keyboard halves' battery percentage
-
-**Right Display (Peripheral):**
-- **Bongo Cat** - Animated cat that bops along as you type (faster typing = faster animation!)
-- **Bluetooth Status** - Active profile and connection state
-- **HID Indicators** - Visual feedback for Caps Lock, Num Lock, Scroll Lock
-
-#### Customization
-
-Edit `config/corne.conf` to enable/disable widgets:
-```conf
-# WPM displays
-CONFIG_NICE_OLED_WIDGET_WPM_NUMBER=y
-CONFIG_NICE_OLED_WIDGET_WPM_GRAPH=y
-CONFIG_NICE_OLED_WIDGET_WPM_BONGO_CAT=y
-
-# Animations
-CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_CAT=y
-CONFIG_NICE_OLED_WIDGET_ANIMATION_PERIPHERAL_POKEMON=y
-```
-
-See [CLAUDE.md](./CLAUDE.md#oled-display-customization) for all available widgets.
-
----
-
-### macOS-Specific Optimizations
-
-#### Screenshot Shortcuts (Fn Layer)
-
-**Comprehensive screenshot toolkit:**
-- **⌘⇧3** - Full screen (position 6)
-- **⌘⇧4** - Select region (position 7)
-- **⌘⇧5** - Screenshot toolbar (position 8)
-- **⌘⇧4 Space** - Window capture (position 9)
-- **⌃⌘⇧3** - Full screen to clipboard (position 10)
-- **⌃⌘⇧4** - Region to clipboard (position 20)
-
-#### Brightness Controls (Fn Layer Thumbs)
-
-> [!IMPORTANT]
->
-> macOS doesn't properly support standard HID brightness codes from external keyboards. Instead, this layout uses:
-> - **Left thumb (Fn+36)**: SLCK (Scroll Lock) → Brightness Down
-> - **Right thumb (Fn+37)**: PAUSE_BREAK → Brightness Up
->
-> These keys are treated as F14/F15 on macOS, which control brightness. [Reference: ZMK Issue #1045](https://github.com/zmkfirmware/zmk/issues/1045)
-
-**No system settings changes needed** - brightness controls work out of the box!
-
-#### Media Controls (L2 Layer)
-
-Optimized layout for quick access:
-- **Play/Pause** - Position 6 (most-used control)
-- **Volume Down/Up** - Positions 7/8 (middle for easy thumb reach)
-- **Previous/Next Track** - Positions 9/10
-- **Mute** - Position 11 (end position to avoid accidental presses)
 
 ---
 

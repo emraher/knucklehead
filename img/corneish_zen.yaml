@@ -11,7 +11,7 @@ layers:
   - L
   - U
   - Y
-  - '?'
+  - {t: ;, s: ':'}
   - $$mdi:close-box$$
   - {t: '$$mdi:backspace$$', s: '$$mdi:backspace-reverse-outline$$', type: backspace}
   - A
@@ -35,13 +35,13 @@ layers:
   - H
   - {t: ',', s: <}
   - {t: ., s: '>'}
-  - {t: ;, s: ':'}
+  - {t: /, s: '?'}
   - {t: Fn, h: '$$mdi:close-box$$'}
   - $$mdi:keyboard-tab$$
   - {t: '$$mdi:keyboard-space$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
   - {t: L2, h: '$$mdi:gesture-tap-hold$$', s: '$$mdi:alpha-w-box$$'}
-  - {t: '&enter_dance', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-shift$$', s: '$$mdi:alpha-w-box$$'}
   - {t: '`', s: '~'}
   L2:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -98,7 +98,7 @@ layers:
   - $$mdi:monitor-dashboard$$
   - $$mdi:window-maximize$$
   - $$mdi:clipboard-outline$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:clipboard-text-outline$$
   - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$', type: bootloader}
   - F6
   - {t: F7, h: '$$mdi:apple-keyboard-control$$'}
@@ -106,9 +106,9 @@ layers:
   - {t: F9, h: '$$mdi:apple-keyboard-command$$'}
   - {t: F10, h: '$$mdi:triangle$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:clipboard-text-outline$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - <-
+  - '|>'
+  - '`{r}`'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$', type: bootloader}
   - {t: '$$mdi:close-box$$', h: Fn}
@@ -184,27 +184,6 @@ combos:
 - p: [21, 33]
   k: {h: \, s: '|'}
   l: [L1, L2, Fn]
-- p: [31, 32]
-  k: '|'
-  l: [L1, L2]
-- p: [32, 33]
-  k: _
-  l: [L1, L2]
-- p: [10, 22]
-  k: {t: '`', s: '~'}
-  l: [L1, L2]
-- p: [22, 34]
-  k: '~'
-  l: [L1, L2]
-- p: [27, 28]
-  k: '{'
-  l: [L1, L2]
-- p: [28, 29]
-  k: '}'
-  l: [L1, L2]
-- p: [33, 34]
-  k: ':'
-  l: [L1, L2]
 - p: [1, 2, 3, 4]
   k: $$mdi:bluetooth-off$$
   l: [Fn]
@@ -228,15 +207,3 @@ combos:
 - p: [6, 7]
   k: $$mdi:play-pause$$
   l: [L1, L2, Fn]
-- p: [31, 33]
-  k: <-
-  l: [L1, L2]
-- p: [30, 31]
-  k: '|>'
-  l: [L1, L2]
-- p: [14, 27]
-  k: '`{r}`'
-  l: [L1]
-- p: [37, 40]
-  k: {t: Fn, h: '$$mdi:close-box$$'}
-  l: [L1]
