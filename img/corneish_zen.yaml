@@ -75,8 +75,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - Gui+$$mdi:arrow-left-bold$$
-  - HOME
-  - END
+  - $$mdi:format-horizontal-align-left$$
+  - $$mdi:format-horizontal-align-right$$
   - Gui+$$mdi:arrow-right-bold$$
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
@@ -123,8 +123,8 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:close-box$$', h: Fn}
-  - SLCK
-  - PAUSE BREAK
+  - $$mdi:brightness-6$$
+  - $$mdi:brightness-7$$
   - {t: '$$mdi:close-box$$', h: L2}
   - {t: '$$mdi:close-box$$', h: L2}
   - $$mdi:apple-keyboard-caps$$
