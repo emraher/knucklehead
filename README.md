@@ -8,7 +8,7 @@ The layout prioritizes ergonomics and intuitiveness by keeping keys in consisten
 
 ### Layout
 
-<img src="./img/corne.svg" alt="Knucklehead keymap layout" width="125%" />
+<img src="./img/corne.svg" alt="Knucklehead keymap layout" />
 
 ## Legend
 

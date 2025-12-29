@@ -365,7 +365,7 @@ parse_config:
 
 draw_config:
   # key dimensions, non-ortho layouts use key_h for width as well
-  # key_w: 100 # This doesn't seem to do anything? 🤔
+  key_w: 70
   key_h: 80
 
   # keys border radius
