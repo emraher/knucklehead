@@ -268,17 +268,18 @@ The keyboard supports five Bluetooth device profiles, allowing you to pair with 
 
 ### OLED Displays
 
-The keyboard uses [zmk-nice-oled](https://github.com/mctechnology17/zmk-nice-oled) for custom OLED widgets.
+The keyboard uses [zmk-nice-oled](https://github.com/mctechnology17/zmk-nice-oled) for custom OLED widgets on 128×32 OLED screens.
 
 **Left display (central half)** shows:
 - Battery percentage for both halves
+- Bluetooth profile indicator (1-5)
+- Luna animation (responds to typing speed)
 - Active modifier indicators (⌃ ⌥ ⌘ ⇧)
 - Current layer name (L1, L2, Fn)
 
 **Right display (peripheral half)** shows:
 - Battery percentage
-
-Note: WPM and Bongo Cat features are currently disabled due to API incompatibility with ZMK v0.3.0.
+- Cat animation
 
 ---
 

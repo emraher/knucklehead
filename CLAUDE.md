@@ -23,7 +23,9 @@ Firmware builds automatically via GitHub Actions on push. There is no local buil
 ```
 config/
 ├── corne.keymap          # Main keymap entry point (includes knucklehead/base.dtsi)
-├── corne.conf            # Firmware settings (OLED, BLE, sleep, debounce)
+├── corne.conf            # Shared firmware settings (BLE, sleep, debounce)
+├── corne_left.conf       # Left (central) OLED config
+├── corne_right.conf      # Right (peripheral) OLED config
 └── west.yml              # ZMK dependencies (ZMK v0.3.0, zmk-auto-layer, zmk-nice-oled)
 
 knucklehead/              # Core firmware implementation
@@ -67,4 +69,10 @@ Defined in `config/west.yml`:
 
 ## OLED Configuration
 
-Configured in `corne.conf`. Left display shows battery, layer, modifiers, Luna animation. Right display shows battery and Pokemon animation. WPM features are disabled (API incompatibility with ZMK v0.3.0).
+Uses 128×32 OLED screens with [zmk-nice-oled](https://github.com/mctechnology17/zmk-nice-oled). Split into shield-specific configs because some features (like WPM) only work on the central half.
+
+**Left (central)** - `corne_left.conf`:
+- Battery, BT profile, Luna animation, Modifiers (macOS symbols), Layer
+
+**Right (peripheral)** - `corne_right.conf`:
+- Battery, Cat animation
