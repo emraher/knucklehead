@@ -8,7 +8,7 @@ The layout prioritizes ergonomics and intuitiveness by keeping keys in consisten
 
 ### Layout
 
-<img src="./img/corne.svg" alt="Knucklehead keymap layout" width="100%" />
+<img src="./img/corne.svg" alt="Knucklehead keymap layout" width="125%" />
 
 ## Legend
 
@@ -279,8 +279,8 @@ The keyboard uses [zmk-nice-oled](https://github.com/mctechnology17/zmk-nice-ole
 
 **Right display (peripheral half)** shows:
 - Battery percentage
-- Bongo Cat animation (responds to typing)
-- Words per minute counter
+
+Note: WPM and Bongo Cat features are currently disabled due to API incompatibility with ZMK v0.3.0.
 
 ---
 

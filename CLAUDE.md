@@ -292,8 +292,8 @@ The repository uses the `zmk-nice-oled` module (from mctechnology17) which provi
 **Right Display (Peripheral):**
 
 - Battery percentage
-- Bongo Cat animation - responds to typing
-- WPM number - numeric words per minute
+
+Note: WPM and Bongo Cat features are disabled due to API incompatibility with ZMK v0.3.0.
 
 ### Available Widgets
 
