@@ -50,10 +50,10 @@ layers:
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - ⌘⌫
-  - ⌥⌫
-  - ⌥⌦
-  - ⌃K
+  - {t: ⌘⇧←, s: ⌘⌫}
+  - {t: ⌥⇧←, s: ⌥⌫}
+  - {t: ⌥⇧→, s: ⌥⌦}
+  - {t: ⌘⇧→, s: ⌃K}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}

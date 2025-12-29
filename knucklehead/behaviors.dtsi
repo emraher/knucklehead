@@ -108,6 +108,41 @@
     };
 
     /*
+    Select/Delete word and line behaviors
+    - tap: select (with shift+arrow)
+    - shift + tap: delete
+
+    Mirrors navigation row below: line start, word left, word right, line end
+    */
+    /omit-if-no-ref/ sel_del_line_start: sel_del_line_start {
+      compatible = "zmk,behavior-mod-morph";
+      bindings = <&kp LG(LS(LEFT))>, <&kp LG(BSPC)>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+      #binding-cells = <0>;
+    };
+
+    /omit-if-no-ref/ sel_del_word_left: sel_del_word_left {
+      compatible = "zmk,behavior-mod-morph";
+      bindings = <&kp LA(LS(LEFT))>, <&kp LA(BSPC)>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+      #binding-cells = <0>;
+    };
+
+    /omit-if-no-ref/ sel_del_word_right: sel_del_word_right {
+      compatible = "zmk,behavior-mod-morph";
+      bindings = <&kp LA(LS(RIGHT))>, <&kp LA(DEL)>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+      #binding-cells = <0>;
+    };
+
+    /omit-if-no-ref/ sel_del_line_end: sel_del_line_end {
+      compatible = "zmk,behavior-mod-morph";
+      bindings = <&kp LG(LS(RIGHT))>, <&kp LC(K)>;
+      mods = <(MOD_LSFT|MOD_RSFT)>;
+      #binding-cells = <0>;
+    };
+
+    /*
     - tap: reset keyboard
     - hold: enter bootloader mode
     */

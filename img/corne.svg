@@ -560,6 +560,14 @@ path.combo {
   translate: -26px 2px;
 }
 
+/* Move select/delete shifted labels left to stay in key */
+.keypos-6 text.shifted,
+.keypos-7 text.shifted,
+.keypos-8 text.shifted,
+.keypos-9 text.shifted {
+  transform: translateX(-8px);
+}
+
 .shifted.mdi\:alpha-w-box {
   translate: 0px 8px;
 }
@@ -915,19 +923,23 @@ path.combo {
 </g>
 <g transform="translate(760, 60)" class="key keypos-6">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">⌘⌫</text>
+<text x="0" y="0" class="key tap">⌘⇧←</text>
+<text x="0" y="-34" class="key shifted">⌘⌫</text>
 </g>
 <g transform="translate(840, 50)" class="key keypos-7">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">⌥⌫</text>
+<text x="0" y="0" class="key tap">⌥⇧←</text>
+<text x="0" y="-34" class="key shifted">⌥⌫</text>
 </g>
 <g transform="translate(920, 40)" class="key keypos-8">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">⌥⌦</text>
+<text x="0" y="0" class="key tap">⌥⇧→</text>
+<text x="0" y="-34" class="key shifted">⌥⌦</text>
 </g>
 <g transform="translate(1000, 50)" class="key keypos-9">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<text x="0" y="0" class="key tap">⌃K</text>
+<text x="0" y="0" class="key tap">⌘⇧→</text>
+<text x="0" y="-34" class="key shifted">⌃K</text>
 </g>
 <g transform="translate(1080, 70)" class="key none keypos-10">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>

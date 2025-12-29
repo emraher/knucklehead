@@ -59,6 +59,15 @@ The layout prioritizes ergonomics and intuitiveness by keeping keys in consisten
 | ![comment](https://api.iconify.design/ph:hash-bold.svg?height=16)                   | ⌘⇧C      | Comment/uncomment  |
 | ![restart](https://api.iconify.design/ph:arrows-clockwise-bold.svg?height=16)       | ⌘⇧F10    | Restart R session  |
 
+### Text Editing (L2 layer, positions 6-9)
+
+| Tap (Select)   | Shift+Tap (Delete) | Description              |
+| :----:         | :----:             | -----------              |
+| ⌘⇧←            | ⌘⌫                 | Line start               |
+| ⌥⇧←            | ⌥⌫                 | Word left                |
+| ⌥⇧→            | ⌥⌦                 | Word right               |
+| ⌘⇧→            | ⌃K                 | Line end                 |
+
 ### Screenshots (Fn layer, positions 6-11)
 
 | Symbol                                                                        | Shortcut  | Description              |
@@ -140,6 +149,8 @@ Access L2 via the inner thumb keys (positions 38 and 39). This layer provides nu
 **Numbers** follow a logical split: 1-5 on the top row (positions 1-5) and 6-0 on the home row (positions 13-17). This keeps all numbers on the left hand and places the most-used programming symbols in more accessible positions via their shifted variants.
 
 **Arrows** use VIM-style HJKL positioning on the right home row (positions 18-21), with home row mods still active for easy selection shortcuts like ⌘+Shift+Arrow.
+
+**Text editing shortcuts** on the top right row (positions 6-9) provide word and line selection/deletion. Tap to select (⌘⇧← for line start, ⌥⇧← for word left, ⌥⇧→ for word right, ⌘⇧→ for line end), or hold Shift and tap to delete (⌘⌫, ⌥⌫, ⌥⌦, ⌃K respectively). These mirror the navigation shortcuts below them.
 
 **Navigation shortcuts** on the bottom right row provide macOS text navigation: ⌘+Left/Right for line start/end (positions 30, 33), ⌥+Left/Right for word jumping (positions 31, 32), and ⌘+Up/Down for document start/end (positions 22, 34).
 

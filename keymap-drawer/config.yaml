@@ -51,6 +51,20 @@ parse_config:
       tap: $$mdi:backspace$$
       shifted: $$mdi:backspace-reverse-outline$$
 
+    # Word/Line Select (tap) / Delete (shifted)
+    "&sel_del_line_start":
+      tap: "⌘⇧←"
+      shifted: "⌘⌫"
+    "&sel_del_word_left":
+      tap: "⌥⇧←"
+      shifted: "⌥⌫"
+    "&sel_del_word_right":
+      tap: "⌥⇧→"
+      shifted: "⌥⌦"
+    "&sel_del_line_end":
+      tap: "⌘⇧→"
+      shifted: "⌃K"
+
     # Bluetooth
     "&bt BT_SEL 0":
       shifted: $$mdi:bluetooth-connect$$
@@ -273,12 +287,6 @@ parse_config:
     LG(RIGHT): $$mdi:format-horizontal-align-right$$ # Line End
     LG(UP): $$mdi:arrow-collapse-up$$ # Doc Start
     LG(DOWN): $$mdi:arrow-collapse-down$$ # Doc End
-
-    # Word/Line Delete
-    LG(BSPC): "⌘⌫"
-    LA(BSPC): "⌥⌫"
-    LA(DEL): "⌥⌦"
-    LC(K): "⌃K"
 
     # Whitespace
     ENTER:
@@ -792,6 +800,14 @@ draw_config:
     .keypos-37 .hold.glyph,
     .keypos-38 .hold.glyph {
       translate: -26px 2px;
+    }
+
+    /* Move select/delete shifted labels left to stay in key */
+    .keypos-6 text.shifted,
+    .keypos-7 text.shifted,
+    .keypos-8 text.shifted,
+    .keypos-9 text.shifted {
+      transform: translateX(-8px);
     }
 
     .shifted.mdi\:alpha-w-box {
