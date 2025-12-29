@@ -20,7 +20,7 @@
     &csl Fn         &kp Z           &kp X           &kp C           &kp D           &kp V               &kp K           &kp H           &kp COMMA       &kp DOT         &kp SLASH       &csl Fn
 // ╰───────────────┴───────────────┴───────────────┼───────────────┼───────────────┼───────────────┤   ├───────────────├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
 //                                                 │36             │37             │38             │   │39             │40             │41             │
-                                                    &lt_tab Fn TAB   &mt LSHFT SPACE &smart_num L2 0     &smart_num L2 0 &smart_enter RSHFT 0 &lt_grave Fn GRAVE
+                                                    &lt_tab Fn TAB   &smart_num L2 0 &mt LSHFT SPACE     &smart_enter RSHFT 0 &smart_num L2 0 &lt_grave Fn GRAVE
 //                                                 ╰───────────────┴───────────────┴───────────────╯   ╰───────────────┴───────────────┴───────────────╯
       >;
     };
