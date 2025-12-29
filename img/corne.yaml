@@ -50,12 +50,12 @@ layers:
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - $$mdi:arrow-left-box$$
-  - $$mdi:arrow-down-box$$
-  - $$mdi:arrow-up-box$$
-  - $$mdi:arrow-right-box$$
-  - $$mdi:arrow-collapse$$
-  - $$mdi:arrow-expand$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '6', s: ^}
   - {t: '7', h: '$$mdi:apple-keyboard-control$$', s: '&'}
@@ -183,6 +183,12 @@ combos:
   l: [L1, L2, Fn]
 - p: [21, 33]
   k: {h: \, s: '|'}
+  l: [L1, L2, Fn]
+- p: [16, 17]
+  k: $$mdi:star-four-points$$
+  l: [L1, L2, Fn]
+- p: [18, 19]
+  k: $$mdi:star-four-points$$
   l: [L1, L2, Fn]
 - p: [1, 2, 3, 4]
   k: $$mdi:bluetooth-off$$

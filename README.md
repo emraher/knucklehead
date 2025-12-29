@@ -100,8 +100,6 @@ Access L2 via the inner thumb keys (positions 38 and 39). This layer provides nu
 
 **Media controls** occupy the bottom left row: Mute (24), Volume Down (25), Volume Up (26), Previous Track (27), Next Track (28), and Play/Pause (29). Volume aligns with the `-/+` concept (down/up), and track controls align with left/right arrow concepts.
 
-**Window management** shortcuts for [AeroSpace](https://github.com/nikitabobko/AeroSpace) occupy the top right row (positions 6-11): ⌥+HJKL for window focus and ⌥+Minus/Equal for resize.
-
 #### Fn — Function Keys and System
 
 Access the Fn layer via the outer pinky keys (positions 24, 35) or by holding the outer thumb keys (positions 36, 41).

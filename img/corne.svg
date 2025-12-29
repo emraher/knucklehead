@@ -15,9 +15,6 @@
 <svg id="mdi:apple-keyboard-shift">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-apple-keyboard-shift" viewBox="0 0 24 24"><path d="M15,18V12H17.17L12,6.83L6.83,12H9V18H15M12,4L22,14H17V20H7V14H2L12,4Z" /></svg>
 </svg>
-<svg id="mdi:arrow-collapse">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-collapse" viewBox="0 0 24 24"><path d="M19.5,3.09L15,7.59V4H13V11H20V9H16.41L20.91,4.5L19.5,3.09M4,13V15H7.59L3.09,19.5L4.5,20.91L9,16.41V20H11V13H4Z" /></svg>
-</svg>
 <svg id="mdi:arrow-collapse-down">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-collapse-down" viewBox="0 0 24 24"><path d="M19.92,12.08L12,20L4.08,12.08L5.5,10.67L11,16.17V2H13V16.17L18.5,10.66L19.92,12.08M12,20H2V22H22V20H12Z" /></svg>
 </svg>
@@ -27,29 +24,14 @@
 <svg id="mdi:arrow-down-bold">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-down-bold" viewBox="0 0 24 24"><path d="M9,4H15V12H19.84L12,19.84L4.16,12H9V4Z" /></svg>
 </svg>
-<svg id="mdi:arrow-down-box">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-down-box" viewBox="0 0 24 24"><path d="M3,5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5C3.89,21 3,20.1 3,19V5M11,6V14.5L7.5,11L6.08,12.42L12,18.34L17.92,12.42L16.5,11L13,14.5V6H11Z" /></svg>
-</svg>
-<svg id="mdi:arrow-expand">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-expand" viewBox="0 0 24 24"><path d="M10,21V19H6.41L10.91,14.5L9.5,13.09L5,17.59V14H3V21H10M14.5,10.91L19,6.41V10H21V3H14V5H17.59L13.09,9.5L14.5,10.91Z" /></svg>
-</svg>
 <svg id="mdi:arrow-left-bold">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-left-bold" viewBox="0 0 24 24"><path d="M20,9V15H12V19.84L4.16,12L12,4.16V9H20Z" /></svg>
-</svg>
-<svg id="mdi:arrow-left-box">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-left-box" viewBox="0 0 24 24"><path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5C3,3.89 3.9,3 5,3H19M18,11H9.5L13,7.5L11.58,6.08L5.66,12L11.58,17.92L13,16.5L9.5,13H18V11Z" /></svg>
 </svg>
 <svg id="mdi:arrow-right-bold">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-right-bold" viewBox="0 0 24 24"><path d="M4,15V9H12V4.16L19.84,12L12,19.84V15H4Z" /></svg>
 </svg>
-<svg id="mdi:arrow-right-box">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-right-box" viewBox="0 0 24 24"><path d="M5,21A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19A2,2 0 0,1 21,5V19C21,20.11 20.1,21 19,21H5M6,13H14.5L11,16.5L12.42,17.92L18.34,12L12.42,6.08L11,7.5L14.5,11H6V13Z" /></svg>
-</svg>
 <svg id="mdi:arrow-up-bold">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-up-bold" viewBox="0 0 24 24"><path d="M15,20H9V12H4.16L12,4.16L19.84,12H15V20Z" /></svg>
-</svg>
-<svg id="mdi:arrow-up-box">
-<svg xmlns="http://www.w3.org/2000/svg" id="mdi-arrow-up-box" viewBox="0 0 24 24"><path d="M21,19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19C20.11,3 21,3.9 21,5V19M13,18V9.5L16.5,13L17.92,11.58L12,5.66L6.08,11.58L7.5,13L11,9.5V18H13Z" /></svg>
 </svg>
 <svg id="mdi:backspace">
 <svg xmlns="http://www.w3.org/2000/svg" id="mdi-backspace" viewBox="0 0 24 24"><path d="M22,3H7C6.31,3 5.77,3.35 5.41,3.88L0,12L5.41,20.11C5.77,20.64 6.31,21 7,21H22A2,2 0 0,0 24,19V5A2,2 0 0,0 22,3M19,15.59L17.59,17L14,13.41L10.41,17L9,15.59L12.59,12L9,8.41L10.41,7L14,10.59L17.59,7L19,8.41L15.41,12" /></svg>
@@ -862,6 +844,14 @@ path.combo {
 <rect rx="4" ry="4" x="785" y="120" width="30" height="30" class="combo"/>
 <use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="789" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
 </g>
+<g class="combo combopos-20">
+<rect rx="4" ry="4" x="385" y="120" width="30" height="30" class="combo"/>
+<use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="389" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
+</g>
+<g class="combo combopos-21">
+<rect rx="4" ry="4" x="785" y="120" width="30" height="30" class="combo"/>
+<use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="789" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
+</g>
 </g>
 </g>
 <g transform="translate(0, 392)" class="layer-L2">
@@ -896,29 +886,29 @@ path.combo {
 <text x="0" y="0" class="key tap">5</text>
 <text x="0" y="-34" class="key shifted">%</text>
 </g>
-<g transform="translate(760, 60)" class="key keypos-6">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:arrow-left-box" xlink:href="#mdi:arrow-left-box" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:arrow-left-box"/>
+<g transform="translate(760, 60)" class="key none keypos-6">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
+<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-11" y="-11" height="22" width="22.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
-<g transform="translate(840, 50)" class="key keypos-7">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:arrow-down-box" xlink:href="#mdi:arrow-down-box" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:arrow-down-box"/>
+<g transform="translate(840, 50)" class="key none keypos-7">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
+<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-11" y="-11" height="22" width="22.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
-<g transform="translate(920, 40)" class="key keypos-8">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:arrow-up-box" xlink:href="#mdi:arrow-up-box" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:arrow-up-box"/>
+<g transform="translate(920, 40)" class="key none keypos-8">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
+<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-11" y="-11" height="22" width="22.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
-<g transform="translate(1000, 50)" class="key keypos-9">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:arrow-right-box" xlink:href="#mdi:arrow-right-box" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:arrow-right-box"/>
+<g transform="translate(1000, 50)" class="key none keypos-9">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
+<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-11" y="-11" height="22" width="22.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
-<g transform="translate(1080, 70)" class="key keypos-10">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:arrow-collapse" xlink:href="#mdi:arrow-collapse" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:arrow-collapse"/>
+<g transform="translate(1080, 70)" class="key none keypos-10">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
+<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-11" y="-11" height="22" width="22.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
-<g transform="translate(1160, 70)" class="key keypos-11">
-<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key"/>
-<use href="#mdi:arrow-expand" xlink:href="#mdi:arrow-expand" x="-11" y="-11" height="22" width="22.0" class="key tap glyph mdi:arrow-expand"/>
+<g transform="translate(1160, 70)" class="key none keypos-11">
+<rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key none"/>
+<use href="#mdi:minus-circle-outline" xlink:href="#mdi:minus-circle-outline" x="-11" y="-11" height="22" width="22.0" class="key none tap glyph mdi:minus-circle-outline"/>
 </g>
 <g transform="translate(40, 150)" class="key trans keypos-12">
 <rect rx="4" ry="4" x="-38" y="-38" width="77" height="77" class="key trans"/>
@@ -1140,6 +1130,14 @@ path.combo {
 <use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="389" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
 </g>
 <g class="combo combopos-19">
+<rect rx="4" ry="4" x="785" y="120" width="30" height="30" class="combo"/>
+<use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="789" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
+</g>
+<g class="combo combopos-20">
+<rect rx="4" ry="4" x="385" y="120" width="30" height="30" class="combo"/>
+<use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="389" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
+</g>
+<g class="combo combopos-21">
 <rect rx="4" ry="4" x="785" y="120" width="30" height="30" class="combo"/>
 <use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="789" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
 </g>
@@ -1371,6 +1369,14 @@ path.combo {
 <text x="1000" y="159" class="combo shifted">|</text>
 </g>
 <g class="combo combopos-8">
+<rect rx="4" ry="4" x="385" y="120" width="30" height="30" class="combo"/>
+<use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="389" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
+</g>
+<g class="combo combopos-9">
+<rect rx="4" ry="4" x="785" y="120" width="30" height="30" class="combo"/>
+<use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="789" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
+</g>
+<g class="combo combopos-10">
 <path d="M240,-3 h-114 a6.0,6.0 0 0 0 -6.0,6.0 v40" class="combo"/>
 <path d="M240,-3 h-34 a6.0,6.0 0 0 0 -6.0,6.0 v20" class="combo"/>
 <path d="M240,-3 h34 a6.0,6.0 0 0 1 6.0,6.0 v10" class="combo"/>
@@ -1378,36 +1384,36 @@ path.combo {
 <rect rx="4" ry="4" x="225" y="-18" width="30" height="30" class="combo"/>
 <use href="#mdi:bluetooth-off" xlink:href="#mdi:bluetooth-off" x="229" y="-14" height="22" width="22.0" class="combo tap glyph mdi:bluetooth-off"/>
 </g>
-<g class="combo combopos-9">
+<g class="combo combopos-11">
 <rect rx="4" ry="4" x="105" y="95" width="30" height="30" class="combo"/>
 <text x="120" y="121" class="combo hold">1</text>
 <use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="112" y="99" height="16" width="16.0" class="combo shifted glyph mdi:bluetooth-connect"/>
 </g>
-<g class="combo combopos-10">
+<g class="combo combopos-12">
 <rect rx="4" ry="4" x="185" y="75" width="30" height="30" class="combo"/>
 <text x="200" y="101" class="combo hold">2</text>
 <use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="192" y="79" height="16" width="16.0" class="combo shifted glyph mdi:bluetooth-connect"/>
 </g>
-<g class="combo combopos-11">
+<g class="combo combopos-13">
 <rect rx="4" ry="4" x="265" y="65" width="30" height="30" class="combo"/>
 <text x="280" y="91" class="combo hold">3</text>
 <use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="272" y="69" height="16" width="16.0" class="combo shifted glyph mdi:bluetooth-connect"/>
 </g>
-<g class="combo combopos-12">
+<g class="combo combopos-14">
 <rect rx="4" ry="4" x="345" y="75" width="30" height="30" class="combo"/>
 <text x="360" y="101" class="combo hold">4</text>
 <use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="352" y="79" height="16" width="16.0" class="combo shifted glyph mdi:bluetooth-connect"/>
 </g>
-<g class="combo combopos-13">
+<g class="combo combopos-15">
 <rect rx="4" ry="4" x="425" y="85" width="30" height="30" class="combo"/>
 <text x="440" y="111" class="combo hold">5</text>
 <use href="#mdi:bluetooth-connect" xlink:href="#mdi:bluetooth-connect" x="432" y="89" height="16" width="16.0" class="combo shifted glyph mdi:bluetooth-connect"/>
 </g>
-<g class="combo combopos-14">
+<g class="combo combopos-16">
 <rect rx="4" ry="4" x="385" y="120" width="30" height="30" class="combo"/>
 <use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="389" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
 </g>
-<g class="combo combopos-15">
+<g class="combo combopos-17">
 <rect rx="4" ry="4" x="785" y="120" width="30" height="30" class="combo"/>
 <use href="#mdi:star-four-points" xlink:href="#mdi:star-four-points" x="789" y="124" height="22" width="22.0" class="combo tap glyph mdi:star-four-points"/>
 </g>
