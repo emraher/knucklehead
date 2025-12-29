@@ -23,6 +23,12 @@ parse_config:
     "&cmo L2":
       tap: $$mdi:close-box$$
       hold: L2
+    "&lt_tab Fn TAB":
+      tap: $$mdi:keyboard-tab$$
+      hold: Fn
+    "&lt_grave Fn GRAVE":
+      tap: "`"
+      hold: Fn
 
     # Modifiers
     "&caps_word": $$mdi:alpha-w-box$$
@@ -89,12 +95,14 @@ parse_config:
     "&r_assign": "<-"
     "&r_pipe": "|>"
     "&r_chunk": "`{r}`"
+    "&r_in": "%in%"
+    "&r_run": $$mdi:play$$
 
     # MacOS Shortcuts
-    "&ss_full": $$mdi:monitor-screenshot$$     # ⌘⇧3 – full screen
-    "&ss_sel": $$mdi:selection-drag$$         # ⌘⇧4 – region
-    "&ss_bar": $$mdi:monitor-dashboard$$      # ⌘⇧5 – toolbar/recorder
-    "&ss_win": $$mdi:window-maximize$$        # ⌘⇧4 Space – window
+    "&ss_full": $$mdi:monitor-screenshot$$ # ⌘⇧3 – full screen
+    "&ss_sel": $$mdi:selection-drag$$ # ⌘⇧4 – region
+    "&ss_bar": $$mdi:monitor-dashboard$$ # ⌘⇧5 – toolbar/recorder
+    "&ss_win": $$mdi:window-maximize$$ # ⌘⇧4 Space – window
     "&ss_full_clip": $$mdi:clipboard-outline$$ # ⌃⌘⇧3 – full to clipboard
     "&ss_sel_clip": $$mdi:clipboard-text-outline$$ # ⌃⌘⇧4 – selection to clipboard
 
@@ -244,6 +252,7 @@ parse_config:
     RSHFT: $$mdi:apple-keyboard-shift$$
     RCMD: $$mdi:apple-keyboard-command$$
     LS(LC(LALT)): $$mdi:triangle$$ # Meh
+    LS(LC(LA(LCMD))): $$mdi:star-four-points$$ # Hyper
 
     # Arrows
     UP: $$mdi:arrow-up-bold$$
@@ -252,6 +261,22 @@ parse_config:
     RIGHT: $$mdi:arrow-right-bold$$
     PG_UP: $$mdi:transfer-up$$
     PG_DN: $$mdi:transfer-down$$
+
+    # Navigation Combos
+    LA(LEFT): $$mdi:chevron-double-left$$ # Word Left
+    LA(RIGHT): $$mdi:chevron-double-right$$ # Word Right
+    LG(LEFT): $$mdi:format-horizontal-align-left$$ # Line Start
+    LG(RIGHT): $$mdi:format-horizontal-align-right$$ # Line End
+    LG(UP): $$mdi:arrow-collapse-up$$ # Doc Start
+    LG(DOWN): $$mdi:arrow-collapse-down$$ # Doc End
+
+    # AeroSpace Shortcuts
+    LA(H): $$mdi:arrow-left-box$$ # Focus Left
+    LA(J): $$mdi:arrow-down-box$$ # Focus Down
+    LA(K): $$mdi:arrow-up-box$$ # Focus Up
+    LA(L): $$mdi:arrow-right-box$$ # Focus Right
+    LA(MINUS): $$mdi:arrow-collapse$$ # Resize -
+    LA(EQUAL): $$mdi:arrow-expand$$ # Resize +
 
     # Whitespace
     ENTER:
@@ -314,16 +339,9 @@ parse_config:
       hold: zoom
 
   zmk_combos:
-    combo_to_2:
-      align: top
-    combo_to_3:
-      align: top
     combo_bt_clear:
       align: top
       offset: 0.03
-    combo_mute:
-      align: top
-      offset: 0.15
     combo_minus:
       key:
         shifted: "_"
@@ -344,10 +362,6 @@ parse_config:
       key:
         shifted: "}"
         hold: "]"
-    combo_semicolon:
-      key:
-        shifted: ":"
-        hold: ";"
 
 draw_config:
   # key dimensions, non-ortho layouts use key_h for width as well

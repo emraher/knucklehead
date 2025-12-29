@@ -1,137 +1,54 @@
-# 👊 Knucklehead
+## Knucklehead
 
-Knucklehead[^1] is a mnemonic, macOS-optimized ergonomic columnar layout for [corne-style 42 key split keyboards](https://github.com/foostan/crkbd), designed[^2] to ease the transition from Apple ANSI keyboards.
+[![Build](https://github.com/emraher/knucklehead/actions/workflows/build.yml/badge.svg)](https://github.com/emraher/knucklehead/actions/workflows/build.yml)
 
-> [!WARNING]
->
-> Under **_active development_**. Expect breaking changes and scarce/incomplete documentation.
+Knucklehead is a mnemonic, macOS-optimized layout for 42-key split ergonomic keyboards. It uses the [Colemak-DH](https://colemakmods.github.io/mod-dh/) alpha layout and is specifically designed for data science workflows involving R, LaTeX, Markdown, and terminal work on macOS.
 
-[![Build ZMK firmware](https://github.com/minusfive/zmk-config/actions/workflows/build.yml/badge.svg)](https://github.com/minusfive/zmk-config/actions/workflows/build.yml) [![Draw keymap](https://github.com/minusfive/zmk-config/actions/workflows/draw.yml/badge.svg)](https://github.com/minusfive/zmk-config/actions/workflows/draw.yml)
+The layout prioritizes ergonomics and intuitiveness by keeping keys in consistent, memorable positions across layers. Rather than requiring you to learn arbitrary key placements, Knucklehead uses associative mnemonics—keys are placed where they "make sense" based on their relationship to other keys or their function.
 
-<img src="./img/corneish_zen.svg" alt="Knucklehead keymap layout graphical representation" width="100%" />
+### Layout
 
-> Drawn with [@caksoylar's Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
-
-> [!IMPORTANT]
->
-> [Home Row Mods](#timer-less-home-row-mods) are now the default. Previous version available on the [legacy branch](https://github.com/minusfive/zmk-config/tree/legacy).
-
-## Layout Improvements
-
-This layout has been specifically optimized for **data science and technical writing workflows** using R, LaTeX, Markdown, and Bash on macOS. The improvements focus on ergonomics, workflow efficiency, and reducing hand movement during long coding sessions.
-
-### R Language Workflow
-
-**Dedicated Keys on Fn Layer** (home row positions 19-21):
-- **`<-`** Assignment operator (Fn+19)
-- **`|>`** Native pipe operator (Fn+20)
-- **` ```{r}``` `** RMarkdown/Quarto code chunk insertion (Fn+21)
-
-These operators are placed on the Fn layer home row for maximum ergonomics - no awkward combos needed. Access them by holding the Fn key (outer pinky columns) and pressing the corresponding home row position.
-
-**Why this matters:** R code heavily uses `<-` for assignment and `|>` for piping. Having these on dedicated, easily accessible keys dramatically improves typing flow compared to typing them out manually or using awkward combos.
-
-### Smart Enter Behavior
-
-The right middle thumb key combines three functions:
-- **Tap:** Enter/Return (more ergonomic than pinky reach)
-- **Hold:** Shift (normal shift behavior)
-- **Double-tap:** Caps Word with R/LaTeX support
-
-**Caps Word Customization:** Continues on `_`, `0-9`, `-`, `{`, `}`, `^` allowing seamless typing of:
-- R constants: `MAX_ITERATIONS_100`
-- LaTeX labels: `\label{FIG_MAIN_RESULT}`
-- LaTeX superscripts: `X^{MAX_VALUE}`
-
-**Ergonomic benefit:** Enter on thumb reduces pinky strain during long sessions, while preserving shift accessibility via hold.
-
-### Navigation Enhancements
-
-**L2 Layer bottom row** provides quick document navigation:
-- **Cmd+Up/Down:** Jump to document start/end
-- **Cmd+Left/Right:** Jump word backward/forward
-- **HOME/END:** Line start/end
-
-**VIM-style arrows:** HJKL positions on L2 with home row mods for modifier combinations.
-
-These navigation shortcuts are essential for quickly moving through R scripts, LaTeX documents, and long markdown files.
-
-### macOS Integration
-
-**Screenshot Shortcuts** (Fn layer top row, positions 6-11):
-- Full screen (⌘⇧3)
-- Select region (⌘⇧4)
-- Screenshot toolbar (⌘⇧5)
-- Window capture (⌘⇧4+Space)
-- Full screen to clipboard (⌃⌘⇧3)
-- Selection to clipboard (⌃⌘⇧4)
-
-**Brightness Controls** (Fn layer thumbs):
-- Uses SLCK (F14) and PAUSE_BREAK (F15) mapping for macOS compatibility
-- Works out of the box without system settings changes
-
-**Media Controls** (L2 layer top row):
-- Play/Pause at most accessible position
-- Volume controls optimized for thumb reach
-- Track navigation easily accessible
-
-### OLED Display Features
-
-**Left Display (Central):**
-- Layer indicator - shows current layer (L1, L2, Fn)
-- WPM graph - tracks typing speed to monitor flow state
-- Battery levels - both keyboard halves
-
-**Right Display (Peripheral):**
-- Bongo Cat - animated typing feedback (faster typing = faster animation)
-- Bluetooth status - active profile and connection state
-- HID indicators - Caps Lock, Num Lock, Scroll Lock
-
-Powered by [mctechnology17's zmk-nice-oled module](https://github.com/mctechnology17/zmk-nice-oled).
-
-### Symbol Access
-
-Essential symbols remain easily accessible through the original combo system:
-- Vertical combos for `! @ # $ %` and `^ & * ( )`
-- Bracket combos for `[ ] { }` and `\`
-- Math operation combos for `+ - = /`
-
-The layout avoids over-complicating with too many combos - only the most frequently used symbols are mapped, keeping the mental model simple.
-
----
+<img src="./img/corne.svg" alt="Knucklehead keymap layout" width="100%" />
 
 ## Legend
 
 | Symbol | Key Name                                            | Symbol | Key Name                                                  |
 | :----: | --------------------------------------------------- | :----: | --------------------------------------------------------- |
-|   🆆    | [Smart 🆆ord behavior](#smart-🆆ord-behaviors)        |   🆇    | [E🆇it smart 🆆ord behavior](#e🆇iting-smart-🆆ord-behaviors) |
-|   ⌃    | Control                                             |   ⇥    | Tab                                                       |
-|   ⌥    | Option                                              |   ␣    | Space                                                     |
-|   ⌘    | Command                                             |   ⇡    | Page Up                                                   |
-|   ▲    | Meh (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⇧)                 |   ⇣    | Page Down                                                 |
-|   ✦    | Hyper (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⌘&nbsp;+&nbsp;⇧) |   ⛭    | Brightness Up                                             |
-|   ⇧    | Shift                                               |   ⛯    | Brightness Down                                           |
-|   ⇪    | Caps Lock                                           |   ⟲    | Firmware reset (hold: bootloader mode)                    |
-|   ⌫    | Backspace                                           |        |                                                           |
-|   ⌦    | Delete                                              |  `L1`  | Layer 1                                                   |
-|   ⏎    | Return                                              |  `L2`  | Layer 2                                                   |
-|   ⏻    | Power                                               |  `Fn`  | Function Layer                                            |
+| 🆆    | [Smart 🆆ord behavior](#smart-behaviors)              | 🆇      | [E🆇it smart 🆆ord behavior](#exiting-smart-behaviors)      |
+| ⌃      | Control                                             | ⇥      | Tab                                                       |
+| ⌥      | Option                                              | ␣      | Space                                                     |
+| ⌘      | Command                                             | ⇡      | Page Up                                                   |
+| ▲      | Meh (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⇧)                 | ⇣      | Page Down                                                 |
+| ✦      | Hyper (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⌘&nbsp;+&nbsp;⇧) | ⟲      | Firmware reset (hold: bootloader mode)                    |
+| ⇧      | Shift                                               | ⌫      | Backspace                                                 |
+| ⌦      | Delete                                              | ⏎      | Return                                                    |
+| `L1`   | Layer 1                                             | `L2`   | Layer 2                                                   |
+| `Fn`   | Function Layer                                      |        |                                                           |
 
-## Features
+The **Ref** layer in the keymap image shows key position numbers (0-41) for reference when reading this guide.
 
-### Mnemonic Affordances
+---
 
-> [!NOTE]
->
-> These are **optimized for the [Colemak-DH](https://colemakmods.github.io/mod-dh/)** layout (default). However, most should still work well regardless of layout, while others will be "lost in translation".
->
-> Other layouts available:
->
-> - [Colemak](./knucklehead/L1_colemak.dtsi) (classic)
-> - [Dvorak](./knucklehead/L1_dvorak.dtsi)
-> - [QWERTY](./knucklehead/L1_qwerty.dtsi)
->
-> See: [Using layouts other than Colemak-DH](#using-layouts-other-than-colemak-dh)
+### Design Philosophy
+
+#### Static, Associative Key Placement
+
+This layout keeps keys in the same physical position across layers whenever possible. When a key must be replaced on an upper layer, its replacement uses an associative mnemonic to help you remember where it is.
+
+For example, function keys F1-F5 on the Fn layer occupy the same positions as numbers 1-5 on L2. The semicolon sits next to comma and period, forming a natural punctuation cluster. Arrow keys use traditional VIM HJKL positions. These associations leverage existing muscle memory and logical groupings rather than forcing you to memorize arbitrary placements.
+
+On upper layers, unused keys are "transparent"—they pass through to the base layer. This means if you accidentally press a letter key while on L2, you still get that letter rather than nothing. Combined with the single base layer design, this makes the keyboard's behavior predictable: you always know what layer you'll return to.
+
+#### Single Base Layer with Non-Stacking Upper Layers
+
+L1 is the one true base layer. There is no way to permanently activate another layer—only momentary, sticky, and smart behaviors are available. This eliminates the confusion of ZMK's layer stacking model where you might accidentally end up with multiple layers active.
+
+Layer-switching macros (`&csl`, `&cmo`) send a cancel event before activating the new layer, ensuring you always return to L1 first. From your perspective, you simply "swap" between upper layers rather than stacking them. This keeps behavior predictable and prevents the disorientation of being "lost" in a layer maze.
+
+#### Mnemonic Affordances
+
+Keys are positioned using memorable associations. 
+
 
 <!-- &nbsp;s force column width and prevent unwanted breaks -->
 
@@ -148,288 +65,253 @@ The layout avoids over-complicating with too many combos - only the most frequen
 | `\| \`                                                                                                                | `I + .` or `/ ?`                                                                                                                        | Shape similarity, proximity, symmetry; logical `OR` — same position, opposite hand as `&` (logical `AND`); same column as `/ ?`.                                     |
 | `&`                                                                                                                   | `R + X`                                                                                                                                 | Shape similarity; logical `AND` — same position, opposite hand as `\|` (logical `OR`)                                                                                |
 | `*`                                                                                                                   | `S + C`                                                                                                                                 | `S`tar, wild `C`ard                                                                                                                                                  |
-| **⇪** (Caps&nbsp;Lock)                                                                                                | **⇧** (Shift)                                                                                                                           | Same position as ⇧ (shift), but on `Fn` layer                                                                                                                        |
 | `! @ # $ %`<br/>`^ & * ( )`                                                                                           | `1 2 3 4 5`<br/>`6 7 8 9 0`                                                                                                             | Symbols maintain their standard ANSI association with numbers as laid-out on `L2`, replicated as combos on `L1` and `L2`                                             |
 | `Fn`                                                                                                                  | Apple ANSI position                                                                                                                     | `Fn` keys retains their familiar lower left corner position, mirrored on the right.                                                                                  |
 
-### Other Associative Affordances
 
-Keys are repositioned in clusters to either "familiar" relative positions, or otherwise logical ones, using ANSI Apple keyboards as a reference, e.g.:
 
-- Arrow keys are placed on `Layer 2` in traditional `VIM + QWERTY` positions.
-- `;:` is positioned next to `, <` and `. >`, as a natural punctuation cluster.
-- `1–5` numbers retain their familiar "left, upper-row" position on `Layer 2`, while `6–0` are positioned in the next row below. This not only feels natural for single handed numeric typing, but also moves the most used symbols [for programming] to more accessible positions.
-- `Fn` keys are aligned with their corresponding numeric positions on `Layer 2`.
-- Bluetooth profile selector combos on the `Fn` layer are aligned with their corresponding numeric positions.
-- Media keys retain almost their relative position, except they're re-arranged a bit so:
-  - `volume up / down` align with `+ / -` and `Up / Down` arrows, and `U` ("up") and `L` ("low") keys.
-  - `back / forward` align with `Left / Right` arrows.
+The bracket cluster (`- _ = + [ { ] } \ |`) maintains its relative spatial arrangement from Apple keyboards but moves to vertical combos accessible to stronger fingers.
 
 ---
 
-### Static, Associative Key Placement
+### Layers
 
-This layout aims to keep keys (and combos) in the same place across layers, and to strike a balance between comfort and intuitiveness.
-Layers may enhance that key's functionality, or replace it with another key, but that key itself won't move to a different location.
+#### L1 — Base Layer (Colemak-DH)
 
-When a key is replaced on upper layers, an associative mnemonic is used to make it easier to orientate yourself in the new layer (e.g. `Fn` keys are placed in the same positions as their corresponding numbers on `Layer 2`).
+The base layer provides your primary typing surface with several enhancements over a standard layout.
 
-On upper layers unused keys are "[transparent](https://zmk.dev/docs/behaviors/misc#transparent)", so events flow down to (and are activated on) the base layer, and thus the base layer's key placement is preserved.
+**Backspace/Delete** occupies position 12 (left pinky home row). Tap for backspace, hold shift and tap for delete. This is more ergonomic than reaching to the top-right corner.
 
-Together with the [single base layer](#single-base-layer) and [upper layer swapping](#upper-layer-swapping-vs-stacking), these principles of static, associative key placement aim to make the [modal nature of layers](<https://en.wikipedia.org/wiki/Modality_(human–computer_interaction)>) more intuitive and predictable, enabling faster development of muscle memory.
+**Quote** sits at position 23 (right pinky home row) rather than the traditional top row, making string delimiters easier to reach during coding.
+
+**Escape** is at position 0 (top-left) and **Cancel** at position 11 (top-right). The cancel key exits any smart word behavior, functioning as an "escape from smart mode."
+
+**Home row modifiers** are available on the inner columns: hold R for Control, S for Option, T for Command, G for Meh (⌃+⌥+⇧) on the left hand, and the mirror positions on the right. These activate only when you press a key on the opposite hand, so normal typing is unaffected.
+
+#### L2 — Numbers, Navigation, and Media
+
+Access L2 via the inner thumb keys (positions 38 and 39). This layer provides numbers, arrows, and media controls.
+
+**Numbers** follow a logical split: 1-5 on the top row (positions 1-5) and 6-0 on the home row (positions 13-17). This keeps all numbers on the left hand and places the most-used programming symbols in more accessible positions via their shifted variants.
+
+**Arrows** use VIM-style HJKL positioning on the right home row (positions 18-21), with home row mods still active for easy selection shortcuts like ⌘+Shift+Arrow.
+
+**Navigation shortcuts** on the bottom right row provide macOS text navigation: ⌘+Left/Right for line start/end (positions 30, 33), ⌥+Left/Right for word jumping (positions 31, 32), and ⌘+Up/Down for document start/end (positions 22, 34).
+
+**Media controls** occupy the bottom left row: Mute (24), Volume Down (25), Volume Up (26), Previous Track (27), Next Track (28), and Play/Pause (29). Volume aligns with the `-/+` concept (down/up), and track controls align with left/right arrow concepts.
+
+**Window management** shortcuts for [AeroSpace](https://github.com/nikitabobko/AeroSpace) occupy the top right row (positions 6-11): ⌥+HJKL for window focus and ⌥+Minus/Equal for resize.
+
+#### Fn — Function Keys and System
+
+Access the Fn layer via the outer pinky keys (positions 24, 35) or by holding the outer thumb keys (positions 36, 41).
+
+**Function keys** F1-F15 align with their corresponding number positions from L2. F1-F5 on the top row (positions 1-5), F6-F10 on the home row (positions 13-17), and F11-F15 on the bottom row (positions 25-29).
+
+**R language operators** occupy the right home row (positions 18-22): `%in%`, `<-`, `|>`, `` ```{r} ``, and Run (⌘+⇧+↵). This places the most frequently used R operations under your strongest fingers when holding Fn.
+
+**Screenshot shortcuts** occupy the top right row (positions 6-11): Full screen to file (⌘+⇧+3), Region to file (⌘+⇧+4), Screenshot toolbar (⌘+⇧+5), Window to file (⌘+⇧+4+Space), Full screen to clipboard (⌃+⌘+⇧+3), and Region to clipboard (⌃+⌘+⇧+4).
+
+**System controls** include Reset/Bootloader at positions 12 and 23 (tap to reset, hold for bootloader) and Output toggle at position 0 (switch between USB and Bluetooth).
+
+---
+
+### Smart Behaviors
+
+Smart behaviors let you tap a key to enter a special mode rather than holding it. You remain in that mode until you press a "break" key (like space) or explicitly exit.
+
+#### Smart L2 Layer
+
+The inner thumb keys (positions 38 and 39) provide three ways to access L2:
+
+**Tap** activates a sticky layer—L2 becomes active for exactly one keypress, then you return to L1. This is ideal for typing a single number or making one arrow movement.
+
+**Double-tap** activates num-word mode—L2 stays active while you type numbers, arrows, operators (`. , / - _ + = *`), backspace, or delete. Press any other key to exit back to L1. This is perfect for entering longer numbers, equations, or navigating through code.
+
+**Hold** activates a momentary layer—L2 is active only while you hold the key, exactly like a traditional layer switch.
+
+#### Smart Enter
+
+The right middle thumb (position 40) combines Enter with Shift and Caps Word:
+
+**Tap** sends Enter. Moving Enter to the thumb reduces pinky strain during long coding sessions.
+
+**Double-tap** activates Caps Word, which shifts all letters until you press a non-continuing character. The continue list is customized for R and LaTeX workflows: it includes underscore, numbers 0-9, minus, curly braces, and caret. This lets you type `MAX_VALUE_123`, `\label{FIG_MAIN}`, or `X^{MAX}` without manually holding shift.
+
+**Hold** activates Shift, providing normal shift behavior for capitalization and symbols.
+
+#### Exiting Smart Behaviors
+
+Press the Cancel key (position 11, top-right on L1) to exit any smart behavior immediately. This functions as an "escape" for smart modes.
+
+On L2, the same thumb keys that activated the smart layer can exit it: tap to exit and return to L1, or hold to exit the smart behavior but remain on L2 momentarily.
 
 ---
 
 ### Timer-less Home Row Mods
 
-By using [@urob's Timer-less](https://github.com/urob/zmk-config?tab=readme-ov-file#timeless-homerow-mods) [Home Row Mods](https://precondition.github.io/home-row-mods), modifier keys (`⌃`, `⌥`, `⌘`, `▲`) can be activated by holding keys in the "home row", consistently across layers, without interfering with normal typing (i.e. without the need to tap a key within a certain time window).
+Home row mods let you access modifiers (Control, Option, Command, Meh) by holding keys in the home row rather than reaching to corner positions. This layout uses [@urob's timer-less implementation](https://github.com/urob/zmk-config), which solves the classic problem of home row mods interfering with fast typing.
 
-> [!NOTE]
->
-> To hold-repeat a key in the home row (or any other dual-purpose key), simply tap it twice and hold.
+The key insight is that modifiers only activate when you press a key on the **opposite** hand. If you're typing normally and roll from T to H quickly, the T won't accidentally trigger Command because H is on the same hand. But if you hold T and press J (opposite hand), you get Command+J.
 
----
+**Left hand modifiers** (trigger with right hand keys):
+- R → Control
+- S → Option
+- T → Command
+- G → Meh (⌃+⌥+⇧)
 
-### Smart 🆆ord Behaviors
+**Right hand modifiers** (trigger with left hand keys):
+- I → Control
+- E → Option
+- N → Command
+- M → Meh (⌃+⌥+⇧)
 
-A smart word behavior is one where, to perform an action for which you would normally `hold` a key, you're only required to `tap` it at the beginning of a sequence to "enter" that special mode, and you remain in that mode until you press a key not in the defined "continue-list" (a "break-word" key, like **␣** [space]), **_or_** until you explicitly "exit" that mode.
-
-The most common example of this type of behavior is [ZMK's `&caps_word`](https://zmk.dev/docs/behaviors/caps-word) (or [QMK's](https://docs.qmk.fm/#/feature_caps_word)).
-
-This layout uses smart word behaviors (marked with the 🆆 symbol):
-
-> [!NOTE]
->
-> These behaviors are adapted from [@urob's fantastic layout](https://github.com/urob/zmk-config).
-
-#### Smart Enter (Right Middle Thumb)
-
-The right hand middle thumb **⏎** (Enter) key replaces the traditional shift-only thumb key with a more versatile behavior:
-
-| Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Effect                                                                                                                                                                                                                                                             |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `tap`                                                                                | **⏎** Enter/Return - More ergonomic than pinky reach                                                                                                                                                                                                              |
-| `hold`                                                                               | **⇧** Shift - Normal shift behavior when held                                                                                                                                                                                                                     |
-| `double-tap`                                                                         | `&caps_word` - Retains shift until non-letter pressed. **Customized for R/LaTeX**: continues on `_` `0-9` `-` `{` `}` `^` for typing `VAR_NAME_123`, `\label{FIG_MAIN}`, `X^{MAX}` |
-
-**Benefits:**
-- Enter on thumb reduces pinky strain during long coding sessions
-- Shift still easily accessible via hold
-- Caps word perfect for R constants (`MAX_ITERATIONS_100`) and LaTeX labels (`FIG_RESULTS_2024`)
-
-**Note:** Quote (`'`) moved from top pinky row to home pinky row (position 23) for easier R string access
-
-#### Smart L2 Layer
-
-Both inner thumbs (marked as `L2` on `L1`) will act as follows:
-
-| Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Effect                                                                                                                                                                                                                                                                 |
-| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `hold`                                                                               | Normal [`&mo` "momentary layer"](https://zmk.dev/docs/behaviors/layers#momentary-layer) behavior.                                                                                                                                                                      |
-| `tap`                                                                                | [Sticky layer behavior](https://zmk.dev/docs/behaviors/sticky-layer), i.e. will switch to `L2` until the next key pressed (within 1s), and immediately exit back to `L1`. Useful when entering a single number, single arrow movements, single media key actions, etc. |
-| `double-tap`                                                                         | Stays on `L2` while numbers, arrows, `, . / - _ + = *`, ⌫ or ⌦ are pressed. Useful when entering longer numeric sequences, math operations, repetitive arrow navigation, etc.                                                                                          |
-
-#### E🆇iting Smart 🆆ord Behaviors
-
-Sometimes you may enter a smart behavior by accident, or may need to cancel it to accommodate special use cases. For these situations there are special "cancel" keys, marked with an 🆇:
-
-On `L1` the right-most 🆇 key (top row, right hand) — and since on `L2` that key position is "[transparent](https://zmk.dev/docs/behaviors/misc#transparent)", it's essentially the same key on that layer — will cancel any smart word behavior (i.e. it will exit `&caps_word`, and/or exit `L2`'s smart layer behavior and bump you back to `L1`).
-It's positioned to mirror the traditional `ESC` key since it's another type of "escape".
-
-On `L2` the same thumb keys you use to summon it will act as follows:
-
-| Action&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Effect                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `tap`                                                                                | Will exit the smart layer behavior and bump you back to `L1`. (It will also cancel `&caps_word`, so it can be used for that as well; from `L1` this would technically be a `triple-tap`, so the top-right 🆇 key is more convenient)                                                                                                                                                                                                                              |
-| `hold`                                                                               | Will also exit the smart layer behavior, but will immediately enter the normal [`&mo` "momentary layer"](https://zmk.dev/docs/behaviors/layers#momentary-layer) behavior as well and remain on `L2`, so as long as you keep holding it you shouldn't see a difference, but as soon as you let go you'll be bumped back to `L1`.<br/><br/>I implemented this to account for accidental "muscle memory" hold actions, making it more forgiving and less confusing. |
+To hold-repeat a home row key (for example, holding R to repeat the letter R), tap it twice quickly then hold on the second tap.
 
 ---
 
-### Non-Stacking Upper Layers
+### Combos
 
-> [!NOTE]
->
-> If this all sounds like gibberish to you here's all you need to understand: `L1` should always be the layer behind `L2` or `Fn`. If that's not the case, please [report it as a bug](https://github.com/minusfive/zmk-config/issues).
+Combos let you press two keys simultaneously to produce a third character. This layout uses vertical combos (pressing a key and the one directly below it) for symbols and special functions.
 
-One of [ZMK's great features is its stacking layers model](https://zmk.dev/docs/features/keymaps#layers).
-It works great for features like multiple "active" base layers, while sharing a common set of "momentary" upper layers (e.g. to switch alpha base layout at runtime, like from Colemak to QWERTY, while maintaining common upper layers for num, nav, fn, etc.).
+#### Symbol Combos (L1 and L2)
 
-However, unless you really understand this behavior and adapt your mental model to it, it may feel confusing and unintuitive at first, and get you lost in a layer maze.
+Left hand vertical combos produce the symbols normally accessed via Shift+Number:
 
-Since the primary aims of this keymap are ease of use and intuitiveness, this behavior is purposefully avoided in a few ways:
+| Position | Keys | Symbol |
+|----------|------|--------|
+| 1+13 | Q+A | ! |
+| 2+14 | W+R | @ |
+| 3+15 | F+S | # |
+| 4+16 | P+T | $ |
+| 5+17 | B+G | % |
+| 13+25 | A+Z | ^ |
+| 14+26 | R+X | & |
+| 15+27 | S+C | * |
+| 16+28 | T+D | ( |
+| 17+29 | G+V | ) |
 
-#### Single Base Layer
+Right hand vertical combos produce brackets, operators, and navigation:
 
-`L1` is the one true base layer. There is no way to permanently activate any other layer - only momentary (`&mo`), sticky (`&sl`), and [smart layer](#smart-l2-layer) behaviors are used.
+| Position | Keys | Symbol |
+|----------|------|--------|
+| 7+19 | L+N | - (minus) |
+| 8+20 | U+E | = (equal) |
+| 9+21 | Y+I | / (slash) |
+| 19+31 | N+H | [ (left bracket) |
+| 20+32 | E+, | ] (right bracket) |
+| 21+33 | I+. | \ (backslash) |
+| 6+18 | J+M | Page Up |
+| 18+30 | M+K | Page Down |
 
-To use a different base layer/layout, you'll need to switch it at compile time. See: [Using layouts other than Colemak-DH](#using-layouts-other-than-colemak-dh).
+#### Bluetooth Combos (Fn layer only)
 
-#### Upper Layer Swapping (vs. Stacking)
+The same vertical combo positions on the Fn layer control Bluetooth:
 
-To prevent even momentary layer stacking, a "cancel" (🆇) event is triggered in some circumstances prior to switching to a layer, so that you're first bumped back down to `L1` before switching to the desired layer.
-This all happens transparently without delay, so from your perspective you just "swapped" upper layers, instead of stacking them.
-This ensures any transparent keys in that upper layer will fall through to `L1`, and sticky timeouts will bump you back to `L1` immediately, as you would expect.
-These special cases are marked with the same 🆇 symbol.
-
-Without this behavior it might've been confusing if you pressed the `Fn` key while on `L2`'s smart layer mode, and pressed a transparent key expecting an `L1` keycode when instead you get an `L2` one.
+| Position | Keys | Function |
+|----------|------|----------|
+| 1+13 | F1+F6 | Select profile 1 |
+| 2+14 | F2+F7 | Select profile 2 |
+| 3+15 | F3+F8 | Select profile 3 |
+| 4+16 | F4+F9 | Select profile 4 |
+| 5+17 | F5+F10 | Select profile 5 |
+| 1+2+3+4 | F1+F2+F3+F4 | Clear bonds |
 
 ---
 
-## Using layouts other than Colemak-DH
+### R and LaTeX Workflow
 
-In order to use layouts other than the default [Colemak-DH](https://colemakmods.github.io/mod-dh/) layout, you'll need to comment-out the `#include "L1_colemak-dh.dtsi"` statement in [./knucklehead/base.dtsi](./knucklehead/base.dtsi), and uncomment the corresponding layout file you wish to use. E.g.:
+The Fn layer includes dedicated keys for R programming, eliminating the need to type multi-character operators manually.
 
-```diff
-# ./knucklehead/base.dtsi
+| Position | Key | Output | Purpose |
+|----------|-----|--------|---------|
+| 18 | M | ` %in% ` | Membership test operator (with surrounding spaces) |
+| 19 | N | `<-` | Assignment operator |
+| 20 | E | `\|>` | Native pipe operator |
+| 21 | I | `` ```{r}``` `` | RMarkdown/Quarto code chunk with cursor positioned inside |
+| 22 | O | ⌘+⇧+↵ | Run current line/selection in RStudio or VS Code |
 
--#include "L1_colemak-dh.dtsi"
-+// #include "L1_colemak-dh.dtsi"
-// #include "L1_colemak.dtsi"
-// #include "L1_dvorak.dtsi"
--// #include "L1_qwerty.dtsi"
-+#include "L1_qwerty.dtsi"
-```
+Access these by holding Fn (positions 24, 35, 36, or 41) and pressing the corresponding home row key.
 
-Feel free to submit [PRs](https://github.com/minusfive/zmk-config/pulls) with additional layouts.
+The Caps Word behavior is customized to continue on characters common in R and LaTeX: underscore for `snake_case` variables, numbers for names like `VAR_123`, minus for some function names, curly braces for `\label{FIG_MAIN}`, and caret for superscripts like `X^{MAX}`.
 
 ---
 
-## Building and Flashing Firmware
+### macOS Integration
 
-### Automatic Building (GitHub Actions)
+#### Screenshot Shortcuts (Fn layer, positions 6-11)
 
-Every time you push changes to this repository, GitHub Actions automatically builds the firmware for you.
+| Position | Shortcut | Action |
+|----------|----------|--------|
+| 6 | ⌘+⇧+3 | Full screen to file |
+| 7 | ⌘+⇧+4 | Region selection to file |
+| 8 | ⌘+⇧+5 | Screenshot/recording toolbar |
+| 9 | ⌘+⇧+4+Space | Window capture to file |
+| 10 | ⌃+⌘+⇧+3 | Full screen to clipboard |
+| 11 | ⌃+⌘+⇧+4 | Region selection to clipboard |
 
-**Monitored files:**
-- `build.yaml`
-- `config/*.keymap`, `config/*.dtsi`, `config/*.conf`
-- `config/west.yml`
-- `knucklehead/*.dtsi`
+#### Output Toggle (Fn layer, position 0)
 
-**Build status:** Check the build badge at the top of this README.
+Toggle between USB and Bluetooth output. Useful when the keyboard is connected via USB but you want to use it with a Bluetooth-paired device.
 
-### Downloading Firmware
+---
 
-1. **Go to [Actions tab](../../actions/workflows/build.yml)** on GitHub
-2. Click on the latest **successful** build (green checkmark ✓)
-3. Scroll down to **Artifacts** section at the bottom
-4. Download the **firmware.zip** file
-5. Extract the zip file
+### Bluetooth
 
-**Files you'll find:**
-```
-firmware/
-├── corne_left-nice_nano-zmk.uf2       # Left half firmware
-└── corne_right-nice_nano-zmk.uf2      # Right half firmware
-```
+The keyboard supports five Bluetooth device profiles, allowing you to pair with multiple computers and switch between them.
 
-### Flashing Instructions
+**Switching profiles**: On the Fn layer, use vertical combos at F-key positions 1-5 (same positions as the symbol combos, but on Fn layer).
 
-#### Prerequisites
-- Your Corne keyboard with nice!nano v2 controllers
-- USB-C cable
-- The `.uf2` firmware files downloaded above
+**Clearing bonds**: Press F1+F2+F3+F4 simultaneously on the Fn layer, or uncomment `CONFIG_ZMK_BLE_CLEAR_BONDS_ON_START=y` in `config/corne.conf`, flash the firmware, pair your devices, then re-comment the line and flash again.
 
-#### Flashing Process
+**Sleep**: The keyboard enters sleep mode after 30 minutes of inactivity to conserve battery. Press any key to wake it.
 
-**For EACH half of your keyboard:**
+---
 
-1. **Enter Bootloader Mode:**
-   - Connect the half to your computer via USB-C
-   - **Double-tap the reset button** on the nice!nano controller
-     - The reset button is the small button on the controller
-     - You should see the board appear as a USB drive named **NICENANO**
+### OLED Displays
 
-2. **Copy Firmware:**
-   - Drag and drop the appropriate `.uf2` file onto the **NICENANO** drive
-     - `corne_left-*.uf2` for the **left** half
-     - `corne_right-*.uf2` for the **right** half
-   - The drive will automatically disconnect once the file is copied
-   - **That's it!** The firmware is now flashed
+The keyboard uses [zmk-nice-oled](https://github.com/mctechnology17/zmk-nice-oled) for custom OLED widgets.
 
-3. **Repeat for Other Half:**
-   - Disconnect the first half
-   - Connect the second half via USB-C
-   - Double-tap reset button
-   - Copy the corresponding `.uf2` file
-   - Wait for automatic disconnect
+**Left display (central half)** shows:
+- Battery percentage for both halves
+- Active modifier indicators (⌃ ⌥ ⌘ ⇧)
+- Current layer name (L1, L2, Fn)
 
-#### Verification
+**Right display (peripheral half)** shows:
+- Battery percentage
+- Bongo Cat animation (responds to typing)
+- Words per minute counter
 
-After flashing both halves:
+---
 
-1. **Disconnect USB** from both halves
-2. **Power on both halves** (if they have power switches)
-3. **Wait 10-15 seconds** for Bluetooth pairing
-4. The halves should automatically connect to each other
-5. Connect one half to your computer (USB or Bluetooth)
-6. Test typing to verify firmware works
+### Building and Flashing
 
-#### Troubleshooting
+#### Automatic Building
 
-**Drive doesn't appear:**
-- Try double-tapping reset **faster** or **slower**
-- Make sure you're using a **data** USB cable (not charge-only)
-- Try a different USB port
+Push changes to GitHub and the firmware builds automatically via GitHub Actions. The workflow monitors `build.yaml`, `config/` files, and `knucklehead/` files.
 
-**Halves don't connect to each other:**
-- Power cycle both halves
-- Re-flash both halves
-- Check Bluetooth profile (try switching profiles with combos)
+#### Downloading Firmware
 
-**Keyboard not recognized by computer:**
-- Try the other USB port
-- Re-flash the central half (usually the left)
-- Check USB cable
+1. Go to the [Actions tab](../../actions/workflows/build.yml)
+2. Click the latest successful build (green checkmark)
+3. Download `firmware.zip` from the Artifacts section
+4. Extract to find `corne_left-*.uf2` and `corne_right-*.uf2`
 
-**Reset Bluetooth connections:**
-- Flash both halves with these config changes:
-  ```conf
-  # Uncomment in config/corne.conf:
-  CONFIG_ZMK_BLE_CLEAR_BONDS_ON_START=y
-  ```
-- Flash, connect, then re-comment the line and flash again
+#### Flashing
+
+For each keyboard half:
+
+1. Connect via USB-C
+2. Double-tap the reset button on the nice!nano controller
+3. The board appears as a USB drive named `NICENANO`
+4. Drag the appropriate `.uf2` file onto the drive
+5. The drive disconnects automatically when flashing completes
 
 #### First Time Setup
 
-After flashing for the first time:
+1. Flash both halves
+2. Disconnect USB from both halves
+3. Power on both halves and wait 10-15 seconds for them to pair with each other
+4. The keyboard appears as "Corne" in your Mac's Bluetooth settings
+5. Pair and enter the passkey if prompted
 
-1. **Pair with your Mac:**
-   - The keyboard will appear as "Corne" in Bluetooth settings
-   - Select it and pair
-   - You may need to enter a passkey (configured as `CONFIG_ZMK_BLE_PASSKEY_ENTRY=y`)
-
-2. **Multiple Device Profiles:**
-   - This keyboard supports **5 Bluetooth profiles**
-   - Switch profiles on the **Fn layer** using combos (see combos.dtsi)
-   - Profile selection combos are aligned with number positions 1-5
-
-3. **Sleep/Wake:**
-   - Keyboard sleeps after **30 minutes** of inactivity
-   - Press any key to wake it up
-
----
-
-## Drawing the Keymap
-
-This project uses [@caksoylar's Keymap Drawer](https://github.com/caksoylar/keymap-drawer) to generate the [keymap SVG](./img/corneish_zen.svg) displayed at the top of this document. It can be re-generated by running the [Draw keymap](./.github/workflows/draw.yml), or locally through the Zsh script:
-
-```zsh
-./scripts/draw.zsh
-```
-
----
-
-## Resources
-
-- [ZMK Firmware GitHub](https://github.com/zmkfirmware/zmk)
-- [ZMK Documentation](https://zmk.dev/docs)
-- [ZMK Discord Server](https://zmk.dev/community/discord/invite)
-- [@caksoylar's Keymap Drawer](https://github.com/caksoylar/keymap-drawer), [ZMK config](https://github.com/caksoylar/zmk-config) and [Display improvements for Corne-ish Zen](https://gist.github.com/caksoylar/c411313990978e1903c244f03039187a)
-- [@urob's ZMK config](https://github.com/urob/zmk-config)
-- [Colemak-DH](https://colemakmods.github.io/mod-dh/) and the [Effort Grid](https://colemakmods.github.io/mod-dh/model.html)
-- [Darryl's beautiful Corne-ish Zen](https://lowprokb.ca/collections/keyboards/products/corne-ish-zen)
-
-[^1]: Name inspired by the [Knuckle mnemonic](https://en.wikipedia.org/wiki/Knuckle_mnemonic).
-
-[^2]: "Designed" is perhaps too strong a word. "Haphazardly and painfully iterated over dozens of permutations, gradually removing annoyances and disruptions to my flow" is too long, though.

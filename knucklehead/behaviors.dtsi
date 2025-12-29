@@ -162,5 +162,35 @@
       bindings = <&kp>, <&enter_dance>;
       #binding-cells = <2>;
     };
+
+    /*
+    - tap: TAB
+    - hold: Fn layer
+
+    Ergonomic thumb-based Fn layer access (left thumb)
+    */
+    /omit-if-no-ref/ lt_tab: layer_tap_tab {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "balanced";
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      quick-tap-ms = <QUICK_TAP_MS>;
+      bindings = <&mo>, <&kp>;
+      #binding-cells = <2>;
+    };
+
+    /*
+    - tap: GRAVE (backtick)
+    - hold: Fn layer
+
+    Ergonomic thumb-based Fn layer access (right thumb)
+    */
+    /omit-if-no-ref/ lt_grave: layer_tap_grave {
+      compatible = "zmk,behavior-hold-tap";
+      flavor = "balanced";
+      tapping-term-ms = <TAPPING_TERM_MS>;
+      quick-tap-ms = <QUICK_TAP_MS>;
+      bindings = <&mo>, <&kp>;
+      #binding-cells = <2>;
+    };
   };
 };

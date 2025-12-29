@@ -115,5 +115,29 @@
                , <&kp GRAVE &kp GRAVE &kp GRAVE>
                , <&kp UP>;
     };
+
+    /*
+      R %in% operator
+      Outputs: ` %in% ` (with spaces)
+     */
+    /omit-if-no-ref/ r_in: r_in {
+      wait-ms = <0>;
+      tap-ms = <0>;
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp SPACE &kp PRCNT &kp I &kp N &kp PRCNT &kp SPACE>;
+    };
+
+    /*
+      Run current line/selection (VS Code / RStudio)
+      Outputs: Cmd+Shift+Enter
+     */
+    /omit-if-no-ref/ r_run: r_run {
+      wait-ms = <0>;
+      tap-ms = <0>;
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings = <&kp LG(LS(RET))>;
+    };
   };
 };

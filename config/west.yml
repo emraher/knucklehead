@@ -4,8 +4,6 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: urob
       url-base: https://github.com/urob
-    - name: caksoylar
-      url-base: https://github.com/caksoylar
     - name: mctechnology17
       url-base: https://github.com/mctechnology17
   projects:
@@ -15,10 +13,6 @@ manifest:
       revision: v0.3.0
 
     - name: zmk-auto-layer
-      remote: urob
-      revision: main
-
-    - name: zmk-tri-state
       remote: urob
       revision: main
 
