@@ -50,10 +50,10 @@ layers:
   - {t: '3', s: '#'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - ⌘⌫
+  - ⌥⌫
+  - ⌥⌦
+  - ⌃K
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -105,11 +105,11 @@ layers:
   - {t: F8, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F9, h: '$$mdi:apple-keyboard-command$$'}
   - {t: F10, h: '$$mdi:triangle$$'}
-  - '%in%'
-  - <-
-  - '|>'
-  - '`{r}`'
-  - $$mdi:play$$
+  - $$phosphor:bold/member-of$$
+  - $$phosphor:bold/arrow-fat-lines-left$$
+  - $$phosphor:bold/pipe$$
+  - $$phosphor:bold/code$$
+  - $$phosphor:bold/person-simple-run$$
   - {t: '$$mdi:backup-restore$$', h: '$$mdi:progress-download$$', type: bootloader}
   - {t: '$$mdi:close-box$$', h: Fn}
   - F11
@@ -117,11 +117,11 @@ layers:
   - F13
   - F14
   - F15
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$phosphor:bold/file-md$$
+  - $$phosphor:bold/file-code$$
+  - $$phosphor:bold/terminal-window$$
+  - $$phosphor:bold/hash$$
+  - $$phosphor:bold/arrows-clockwise$$
   - {t: '$$mdi:close-box$$', h: Fn}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}

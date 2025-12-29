@@ -66,21 +66,6 @@
     };
 
     /*
-    - tap: sticky shift
-    - double-tap: caps-word (shift + tap mod-morph)
-    - hold: shift
-
-    From: https://github.com/urob/zmk-config/
-    */
-    /omit-if-no-ref/ smart_shift: smart_shift {
-      compatible = "zmk,behavior-mod-morph";
-      bindings = <&sk RSHFT>, <&caps_word>;
-      mods = <(MOD_RSFT)>;
-      #binding-cells = <0>;
-    };
-
-
-    /*
     - tap: num-word
     - hold: &mo layer
 

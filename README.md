@@ -12,18 +12,63 @@ The layout prioritizes ergonomics and intuitiveness by keeping keys in consisten
 
 ## Legend
 
-| Symbol | Key Name                                            | Symbol | Key Name                                                  |
-| :----: | --------------------------------------------------- | :----: | --------------------------------------------------------- |
-| 🆆    | [Smart 🆆ord behavior](#smart-behaviors)              | 🆇      | [E🆇it smart 🆆ord behavior](#exiting-smart-behaviors)      |
-| ⌃      | Control                                             | ⇥      | Tab                                                       |
-| ⌥      | Option                                              | ␣      | Space                                                     |
-| ⌘      | Command                                             | ⇡      | Page Up                                                   |
-| ▲      | Meh (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⇧)                 | ⇣      | Page Down                                                 |
-| ✦      | Hyper (⌃&nbsp;+&nbsp;⌥&nbsp;+&nbsp;⌘&nbsp;+&nbsp;⇧) | ⟲      | Firmware reset (hold: bootloader mode)                    |
-| ⇧      | Shift                                               | ⌫      | Backspace                                                 |
-| ⌦      | Delete                                              | ⏎      | Return                                                    |
-| `L1`   | Layer 1                                             | `L2`   | Layer 2                                                   |
-| `Fn`   | Function Layer                                      |        |                                                           |
+### Modifiers & Layers
+
+| Symbol         | Description                                              |
+| :----:         | -----------                                              |
+| ⌃              | Control                                                  |
+| ⌥              | Option                                                   |
+| ⌘              | Command                                                  |
+| ⇧              | Shift                                                    |
+| ▲              | Meh (⌃+⌥+⇧)                                              |
+| ✦              | Hyper (⌃+⌥+⌘+⇧)                                          |
+| `L1` `L2` `Fn` | Layer names                                              |
+| 🆆              | [Smart Word / Caps Word](#smart-behaviors)               |
+| 🆇              | [Cancel / Exit smart behavior](#exiting-smart-behaviors) |
+
+### Keys & Navigation
+
+| Symbol  | Description                       |
+| :----:  | -----------                       |
+| ⇥       | Tab                               |
+| ␣       | Space                             |
+| ⏎       | Return                            |
+| ⌫       | Backspace                         |
+| ⌦       | Delete                            |
+| ⇡ ⇣     | Page Up / Page Down               |
+| ↑ ↓ ← → | Arrow keys                        |
+| ⟲       | Firmware reset (hold: bootloader) |
+
+### R Language (Fn layer, positions 18-22)
+
+| Symbol                                                                              | Output        | Description                       |
+| :----:                                                                              | ------        | -----------                       |
+| ![member-of](https://api.iconify.design/ph:member-of-bold.svg?height=16)            | ` %in% `      | Membership operator (with spaces) |
+| ![assign](https://api.iconify.design/ph:arrow-fat-lines-left-bold.svg?height=16)    | `<-`          | Assignment operator               |
+| ![pipe](https://api.iconify.design/ph:pipe-bold.svg?height=16)                      | `\|>`         | Native pipe operator              |
+| ![code](https://api.iconify.design/ph:code-bold.svg?height=16)                      | ` ```{r}``` ` | RMarkdown code chunk              |
+| ![run](https://api.iconify.design/ph:person-simple-run-bold.svg?height=16)          | ⌘⇧↵           | Run line/selection                |
+
+### RStudio Shortcuts (Fn layer, positions 30-34)
+
+| Symbol                                                                              | Shortcut | Description        |
+| :----:                                                                              | -------- | -----------        |
+| ![knit](https://api.iconify.design/ph:file-md-bold.svg?height=16)                   | ⌘⇧K      | Knit document      |
+| ![source](https://api.iconify.design/ph:file-code-bold.svg?height=16)               | ⌃1       | Focus Source pane  |
+| ![console](https://api.iconify.design/ph:terminal-window-bold.svg?height=16)        | ⌃2       | Focus Console pane |
+| ![comment](https://api.iconify.design/ph:hash-bold.svg?height=16)                   | ⌘⇧C      | Comment/uncomment  |
+| ![restart](https://api.iconify.design/ph:arrows-clockwise-bold.svg?height=16)       | ⌘⇧F10    | Restart R session  |
+
+### Screenshots (Fn layer, positions 6-11)
+
+| Symbol                                                                        | Shortcut  | Description              |
+| :----:                                                                        | --------  | -----------              |
+| ![full](https://api.iconify.design/mdi:monitor-screenshot.svg?height=16)      | ⌘⇧3       | Full screen to file      |
+| ![sel](https://api.iconify.design/mdi:selection-drag.svg?height=16)           | ⌘⇧4       | Region to file           |
+| ![bar](https://api.iconify.design/mdi:monitor-dashboard.svg?height=16)        | ⌘⇧5       | Screenshot toolbar       |
+| ![win](https://api.iconify.design/mdi:window-maximize.svg?height=16)          | ⌘⇧4 Space | Window to file           |
+| ![clip1](https://api.iconify.design/mdi:clipboard-outline.svg?height=16)      | ⌃⌘⇧3      | Full screen to clipboard |
+| ![clip2](https://api.iconify.design/mdi:clipboard-text-outline.svg?height=16) | ⌃⌘⇧4      | Region to clipboard      |
 
 The **Ref** layer in the keymap image shows key position numbers (0-41) for reference when reading this guide.
 
@@ -107,6 +152,8 @@ Access the Fn layer via the outer pinky keys (positions 24, 35) or by holding th
 **Function keys** F1-F15 align with their corresponding number positions from L2. F1-F5 on the top row (positions 1-5), F6-F10 on the home row (positions 13-17), and F11-F15 on the bottom row (positions 25-29).
 
 **R language operators** occupy the right home row (positions 18-22): `%in%`, `<-`, `|>`, `` ```{r} ``, and Run (⌘+⇧+↵). This places the most frequently used R operations under your strongest fingers when holding Fn.
+
+**RStudio shortcuts** occupy the bottom right row (positions 30-34): Knit (⌘+⇧+K), Focus Source (⌃+1), Focus Console (⌃+2), Comment/Uncomment (⌘+⇧+C), and Restart R (⌘+⇧+F10).
 
 **Screenshot shortcuts** occupy the top right row (positions 6-11): Full screen to file (⌘+⇧+3), Region to file (⌘+⇧+4), Screenshot toolbar (⌘+⇧+5), Window to file (⌘+⇧+4+Space), Full screen to clipboard (⌃+⌘+⇧+3), and Region to clipboard (⌃+⌘+⇧+4).
 

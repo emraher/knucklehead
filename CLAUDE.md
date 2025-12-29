@@ -47,7 +47,6 @@ knucklehead/              # Core firmware implementation
 
 **Smart behaviors**:
 - `&smart_num` (thumb keys): tap = sticky L2, double-tap = num-word mode, hold = momentary L2
-- `&smart_shift`: tap = sticky shift, double-tap = caps_word, hold = shift
 - `&smart_enter`: tap = enter, double-tap = caps_word, hold = shift
 
 **Combos**: Vertical key pairs produce symbols (Q+A=!, W+R=@, etc.) and brackets (N+H=[, E+,=], I+.=\).

@@ -35,9 +35,6 @@ parse_config:
     "&kt RSHIFT":
       tap: $$mdi:apple-keyboard-shift$$
       hold: $$mdi:toggle-switch$$
-    "&smart_shift":
-      tap: $$mdi:apple-keyboard-shift$$
-      shifted: $$mdi:alpha-w-box$$
     "&smart_enter RSHFT 0":
       tap: $$mdi:keyboard-return$$
       hold: $$mdi:apple-keyboard-shift$$
@@ -92,11 +89,11 @@ parse_config:
       hold: $$mdi:progress-download$$
 
     # R Language Operators
-    "&r_assign": "<-"
-    "&r_pipe": "|>"
-    "&r_chunk": "`{r}`"
-    "&r_in": "%in%"
-    "&r_run": $$mdi:play$$
+    "&r_assign": "$$phosphor:bold/arrow-fat-lines-left$$"
+    "&r_pipe": "$$phosphor:bold/pipe$$"
+    "&r_chunk": "$$phosphor:bold/code$$"
+    "&r_in": "$$phosphor:bold/member-of$$"
+    "&r_run": "$$phosphor:bold/person-simple-run$$"
 
     # MacOS Shortcuts
     "&ss_full": $$mdi:monitor-screenshot$$ # ⌘⇧3 – full screen
@@ -105,6 +102,13 @@ parse_config:
     "&ss_win": $$mdi:window-maximize$$ # ⌘⇧4 Space – window
     "&ss_full_clip": $$mdi:clipboard-outline$$ # ⌃⌘⇧3 – full to clipboard
     "&ss_sel_clip": $$mdi:clipboard-text-outline$$ # ⌃⌘⇧4 – selection to clipboard
+
+    # RStudio Shortcuts
+    "&rs_knit": $$phosphor:bold/file-md$$ # ⌘⇧K – Knit document
+    "&rs_source": $$phosphor:bold/file-code$$ # ⌃1 – Focus Source
+    "&rs_console": $$phosphor:bold/terminal-window$$ # ⌃2 – Focus Console
+    "&rs_comment": $$phosphor:bold/hash$$ # ⌘⇧C – Comment/uncomment
+    "&rs_restart": $$phosphor:bold/arrows-clockwise$$ # ⌘⇧F10 – Restart R
 
   # ZMK
   zmk_keycode_map:
@@ -270,13 +274,11 @@ parse_config:
     LG(UP): $$mdi:arrow-collapse-up$$ # Doc Start
     LG(DOWN): $$mdi:arrow-collapse-down$$ # Doc End
 
-    # AeroSpace Shortcuts
-    LA(H): $$mdi:arrow-left-box$$ # Focus Left
-    LA(J): $$mdi:arrow-down-box$$ # Focus Down
-    LA(K): $$mdi:arrow-up-box$$ # Focus Up
-    LA(L): $$mdi:arrow-right-box$$ # Focus Right
-    LA(MINUS): $$mdi:arrow-collapse$$ # Resize -
-    LA(EQUAL): $$mdi:arrow-expand$$ # Resize +
+    # Word/Line Delete
+    LG(BSPC): "⌘⌫"
+    LA(BSPC): "⌥⌫"
+    LA(DEL): "⌥⌦"
+    LC(K): "⌃K"
 
     # Whitespace
     ENTER:
